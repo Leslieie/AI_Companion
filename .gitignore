@@ -1,0 +1,45 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model weights and checkpoints
+outputs/checkpoints/*
+!outputs/checkpoints/.gitkeep
+*.bin
+*.safetensors
+*.pt
+
+# Hugging Face cache
+.cache/
+
+# Logs
+outputs/logs/*
+!outputs/logs/.gitkeep
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Weights & Biases
+wandb/
+
+# Project context files (not for git)
+CLAUDE.md
+ai_companion_repo_bootstrap.md

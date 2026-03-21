@@ -1,0 +1,10 @@
+model_name: "Qwen/Qwen2.5-1.5B-Instruct"
+torch_dtype: "auto"
+device_map: "auto"
+
+generation:
+  max_new_tokens: 160
+  temperature: 0.8
+  do_sample: true
+  top_p: 0.9
+  repetition_penalty: 1.1

@@ -1,0 +1,34 @@
+defaults:
+  affection: 50
+  trust: 50
+  intimacy: 50
+  mood: "neutral"
+  energy: 70
+
+keywords:
+  gratitude:
+    words: ["thank you", "thanks", "appreciate"]
+    effects:
+      affection: 2
+
+  negative_emotion:
+    words: ["sad", "upset", "overwhelmed", "tired", "stressed"]
+    effects:
+      mood: "concerned"
+      trust: 1
+
+  hostility:
+    words: ["leave me alone", "annoying", "stop", "shut up"]
+    effects:
+      affection: -3
+      trust: -2
+
+  positive_emotion:
+    words: ["happy", "great", "excited", "awesome"]
+    effects:
+      mood: "cheerful"
+      affection: 1
+
+clamp:
+  min: 0
+  max: 100

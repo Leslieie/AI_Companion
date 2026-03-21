@@ -1,0 +1,21 @@
+model_name: "Qwen/Qwen2.5-1.5B-Instruct"
+data_path: "data/processed/train_sft.jsonl"
+
+training:
+  output_dir: "outputs/checkpoints/sft_run_01"
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 2.0e-4
+  num_train_epochs: 1
+  logging_steps: 10
+  save_steps: 100
+  bf16: true
+  max_seq_length: 1024
+  report_to: "none"
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
