@@ -110,3 +110,66 @@ Relevant memories:
 - Short-term memory resets each session.
 - Long-term memory persists across sessions (stored as JSON file for MVP).
 - Future work: use a lightweight database or vector store.
+
+## Memory Write Mechanism (MVP)
+
+Long-term memory is not updated at every turn. Instead, the system selectively writes memory based on simple rules.
+
+### Trigger Conditions
+A new memory entry is created when:
+- the user provides stable personal information  
+- the user expresses a recurring emotional pattern  
+- the user mentions an important future event  
+- the user expresses a clear preference  
+
+### Extraction Strategy
+In the MVP, memory is extracted using:
+- rule-based heuristics
+- keyword matching (e.g., "I am", "I like", "I have")
+
+The system then:
+1. summarizes the information into a short "fact"
+2. assigns a timestamp
+3. stores it in long-term memory
+
+## Memory Usage in System Pipeline
+
+The memory module is integrated into the system workflow as follows:
+
+1. User sends a message
+2. Short-term memory is updated
+3. State tracker updates internal state
+4. Memory store retrieves relevant long-term memory
+5. Prompt builder constructs the prompt using:
+   - persona
+   - state
+   - memory
+   - recent conversation
+6. Model generates response
+7. Memory write policy decides whether to store new memory
+
+## Interaction with Other Modules
+
+Memory interacts with other components in the system:
+
+- With state_tracker:
+  emotional signals may influence both state updates and memory creation
+
+- With policy_selector:
+  memory can influence response style (e.g., more supportive tone)
+
+- With prompt_builder:
+  memory is injected into the prompt to improve personalization
+
+This ensures the system produces more consistent and context-aware responses.
+
+## Limitations (MVP)
+
+The current memory system has several limitations:
+
+- retrieval is based only on recency
+- no semantic similarity search
+- no mechanism to resolve conflicting memories
+- no advanced privacy filtering
+
+These limitations are acceptable for the MVP and will be improved in future work.
