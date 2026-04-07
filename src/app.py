@@ -1,5 +1,9 @@
 """Interactive CLI companion that ties together inference, state, memory, and policy.
 
+Pipeline per turn:
+    emotion_classifier -> state_tracker -> memory extract + retrieve
+    -> policy_selector -> prompt_builder -> generate
+
 Usage:
     python -m src.app
 
@@ -13,23 +17,8 @@ from .modules.memory_store import MemoryStore
 from .modules.policy_selector import select_policy
 from .modules.emotion_classifier import classify_emotion
 
-
-def _extract_memory(user_message: str, emotion: str) -> str | None:
-    """Extract a simple memory from the user message.
-
-    Keeps messages that are long enough to carry meaningful content.
-    Prefixes with the detected emotion for context.
-
-    Args:
-        user_message: The user's input text.
-        emotion: The classified emotion label.
-
-    Returns:
-        A memory string, or None if the message is too short to store.
-    """
-    if len(user_message.split()) < 3:
-        return None
-    return f"[{emotion}] {user_message}"
+# Short-term memory window: last 10 turns (20 messages)
+MAX_HISTORY_MESSAGES: int = 20
 
 
 def main() -> None:
@@ -40,6 +29,7 @@ def main() -> None:
 
     tracker = StateTracker()
     memory = MemoryStore()
+    history: list[dict[str, str]] = []
 
     while True:
         user_input = input("You: ").strip()
@@ -49,22 +39,40 @@ def main() -> None:
             print("Goodbye!")
             break
 
+        # 1. Perceive: classify emotion
         emotion = classify_emotion(user_input)
+
+        # 2. Update relationship state
         state = tracker.update(user_input)
 
-        # Store a memory from this turn before retrieval
-        mem = _extract_memory(user_input, emotion)
-        if mem:
-            memory.add(mem)
-
+        # 3. Memory: extract new facts, then retrieve relevant ones
+        memory.extract_and_store(user_input, tracker.turn_count)
         memories = memory.retrieve(user_input)
-        policy = select_policy(user_input, state)
 
-        messages = build_prompt(user_input, state, memories, policy)
+        # 4. Select policy using emotion label + state
+        policy = select_policy(emotion, state)
+
+        # 5. Append user message to conversation history
+        history.append({"role": "user", "content": user_input})
+
+        # 6. Build prompt with recent history (last N messages)
+        recent = history[-MAX_HISTORY_MESSAGES:]
+        messages = build_prompt(recent, state, memories, policy)
+
+        # 7. Generate response
         response = generate_response(tokenizer, model, messages)
 
-        print(f"Companion: {response}\n")
-        print(f"  [emotion={emotion}, policy={policy}, mood={state['mood']}, memories={memory.size()}]")
+        # 8. Record assistant response in history
+        history.append({"role": "assistant", "content": response})
+
+        # 9. Output response and state debug info
+        print(f"Ari: {response}\n")
+        print(
+            f"  [turn={tracker.turn_count} | emotion={emotion} | policy={policy} | "
+            f"mood={state['mood']} | aff={state['affection']} | "
+            f"trust={state['trust']} | intm={state['intimacy']} | "
+            f"energy={state['energy']} | mem={memory.size()}]"
+        )
         print()
 
 
