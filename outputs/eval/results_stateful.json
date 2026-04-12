@@ -1,0 +1,195 @@
+{
+  "metrics": {
+    "mode": "stateful",
+    "model_path": "Qwen/Qwen2.5-1.5B-Instruct",
+    "num_samples": 10,
+    "emotion_appropriateness": 0.5,
+    "distinct_1": 0.6206896551724138,
+    "distinct_2": 0.9458823529411765,
+    "perplexity": null
+  },
+  "responses": [
+    {
+      "index": 0,
+      "user": "I didn't get into the club I really wanted to join. I've been thinking about it all day.",
+      "response": "It's okay to feel disappointed when you can't achieve what you want. Sometimes, our desires don't align with reality, but that doesn’t mean we should give up on them entirely. Reflecting on why this happened might help you find better opportunities next time. Maybe there’s something within your own capabilities that isn’t being utilized yet? Take some time to process these thoughts and maybe consider setting smaller goals along the way until you reach your big goal eventually.",
+      "expected_policy": "comforting",
+      "predicted_policy": "comforting",
+      "response_emotion": "sad",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": []
+    },
+    {
+      "index": 1,
+      "user": "I have to give a presentation in front of 200 people tomorrow and I can barely breathe thinking about it.",
+      "response": "It sounds like you're feeling quite anxious about your upcoming presentation. Knowing that you're having such strong emotions is important because it's often a sign that you care deeply about the topic. While being nervous is normal, there are ways to manage this anxiety effectively. Would you be open to discussing some strategies to help prepare for your presentation?",
+      "expected_policy": "comforting",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": [
+        "I have to give a presentation in front of 200 people tomorrow and I can barely breathe thinking about it."
+      ]
+    },
+    {
+      "index": 2,
+      "user": "I go to the gym sometimes but I never talk to anyone there.",
+      "response": "It's great that you're finding ways to stay active! Sometimes, making connections starts with small gestures. Maybe you could ask someone if they'd like company while they work out or maybe suggest a friendly conversation after. Small acts of kindness can lead to bigger ones.",
+      "expected_policy": "comforting",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": []
+    },
+    {
+      "index": 3,
+      "user": "I have the whole Saturday free for once. No idea what to do with it.",
+      "response": "That sounds like an exciting prospect! How about exploring some new hobbies or maybe taking a long walk? Sometimes just getting out of the house can be refreshing. What's something you've always wanted to try but haven't had time for yet?",
+      "expected_policy": "neutral",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": [
+        "I have the whole Saturday free for once. No idea what to do with it."
+      ]
+    },
+    {
+      "index": 4,
+      "user": "I started reading this book about the history of the internet and it's surprisingly interesting.",
+      "response": "That sounds like an enriching experience! What part of the book were you particularly drawn to?",
+      "expected_policy": "neutral",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": []
+    },
+    {
+      "index": 5,
+      "user": "Rice, eggs, some vegetables, soy sauce... pretty basic stuff.",
+      "response": "Those ingredients sound just right for a change! Stir-fry sounds delicious with those options. It's always good to experiment with new combinations. Enjoy cooking!",
+      "expected_policy": "neutral",
+      "predicted_policy": "reflective",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 50,
+        "trust": 51,
+        "intimacy": 50,
+        "mood": "concerned",
+        "energy": 70
+      },
+      "policy_in_prompt": "reflective",
+      "memories": [
+        "I need to cook something tonight but I'm so tired of making pasta."
+      ]
+    },
+    {
+      "index": 6,
+      "user": "I just got my paper back and I got an A! I worked so hard on that one.",
+      "response": "That's great news! Getting an A shows you're dedicated to your work and committed to learning. It's always nice when things turn out well. How did you prepare for this assignment?",
+      "expected_policy": "playful",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": [
+        "I just got my paper back and I got an A! I worked so hard on that one."
+      ]
+    },
+    {
+      "index": 7,
+      "user": "My best friend from back home is coming to visit this weekend and I'm so excited!",
+      "response": "That sounds like an exciting prospect! Visiting someone you're close with can be such a positive experience. How have your plans been shaping up?",
+      "expected_policy": "playful",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 51,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "cheerful",
+        "energy": 70
+      },
+      "policy_in_prompt": "playful",
+      "memories": [
+        "My best friend from back home is coming to visit this weekend and I'm so excited!"
+      ]
+    },
+    {
+      "index": 8,
+      "user": "My group project partner hasn't done a single thing and the deadline is in two days. I'm so done.",
+      "response": "I understand how you feel; deadlines can be incredibly stressful. It's important to communicate your concerns clearly with your partner. Perhaps suggest a meeting to discuss the situation openly and collaboratively. Remember, it's okay to ask for help if you need it. How do you think this could benefit both of you?",
+      "expected_policy": "tense",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": [
+        "My group project partner hasn't done a single thing and the deadline is in two days. I'm so done."
+      ]
+    },
+    {
+      "index": 9,
+      "user": "My professor gave me a C on an essay I spent weeks on and the comments are just 'needs more depth.' That's it. That's the entire feedback.",
+      "response": "It can be disappointing when professors don't provide specific feedback that could help you improve your work. It might be helpful to reach out to them privately and ask for more detailed guidance if they're willing. Sometimes, additional input from someone else reviewing your work can also offer valuable insights. Remember, their feedback is meant to support you in learning and growing as a writer.",
+      "expected_policy": "tense",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": []
+    }
+  ]
+}

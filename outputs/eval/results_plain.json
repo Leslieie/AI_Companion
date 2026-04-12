@@ -1,0 +1,183 @@
+{
+  "metrics": {
+    "mode": "plain",
+    "model_path": "Qwen/Qwen2.5-1.5B-Instruct",
+    "num_samples": 10,
+    "emotion_appropriateness": 0.6,
+    "distinct_1": 0.5412844036697247,
+    "distinct_2": 0.9268795056642637,
+    "perplexity": null
+  },
+  "responses": [
+    {
+      "index": 0,
+      "user": "I didn't get into the club I really wanted to join. I've been thinking about it all day.",
+      "response": "It's completely understandable to feel disappointed and frustrated when you don't get accepted into your dream club. However, there is still hope for future opportunities! \n\nFirstly, take some time to reflect on what went wrong with your application and how you can improve in the future. Were there any mistakes or oversights? Did you submit the correct information?\n\nSecondly, consider reaching out to other members of the club or the organization that runs them to see if they have any insider tips or advice for getting in.\n\nLastly, remember that rejection doesn't mean you're not good enough or unattractive - everyone goes through this at one point or another. Keep working hard towards your goals, and eventually, things will work out!",
+      "expected_policy": "comforting",
+      "predicted_policy": "comforting",
+      "response_emotion": "sad",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 1,
+      "user": "I have to give a presentation in front of 200 people tomorrow and I can barely breathe thinking about it.",
+      "response": "I'm sorry to hear that you're feeling anxious about giving your presentation. Here are some tips that may help:\n\n1. Prepare thoroughly: Make sure you know all the information you need to present, including any visuals or props you plan on using. Practice your speech several times beforehand so you feel comfortable with what you'll be saying.\n\n2. Focus on your message: Remember why you're presenting and focus on communicating your key points clearly and effectively. Don't worry too much about impressing the audience - just try to make them understand your ideas.\n\n3. Take deep breaths: When you start to feel nervous or out of breath during your presentation, take slow, deep breaths to calm yourself down. You might also find it helpful to use relaxation techniques like progressive muscle relaxation or guided imagery.\n\n",
+      "expected_policy": "comforting",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 2,
+      "user": "I go to the gym sometimes but I never talk to anyone there.",
+      "response": "It's great that you're taking care of your health by going to the gym! While talking to other gym-goers might not be for everyone, it can certainly add an element of social interaction and support to your workout routine.\n\nIf you prefer solitude during your workouts, that's perfectly fine too. The most important thing is to focus on your own progress and enjoy the physical activity itself.\n\nHowever, if you do feel comfortable chatting with others at the gym, consider starting a conversation about common interests or fitness-related topics. This can help break down any barriers and make your time in the gym more enjoyable and supportive.\n\nRemember, your mental well-being is just as important as your physical health. So don't hesitate to reach out to others and form connections when you feel ready!",
+      "expected_policy": "comforting",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 3,
+      "user": "I have the whole Saturday free for once. No idea what to do with it.",
+      "response": "That's great! Here are some ideas to help you make the most of your entire Saturday:\n\n1. Spend time outdoors: Go for a hike, take a bike ride, or simply spend some time in nature.\n\n2. Learn something new: Take a class or workshop that interests you, such as cooking, painting, or photography.\n\n3. Exercise: If you're not already active, consider joining a gym or fitness class.\n\n4. Volunteer: Find an organization near you and volunteer your time.\n\n5. Read: Pick up a book from the library or buy one at a bookstore.\n\n6. Watch movies: Stream a movie or TV show on Netflix or Hulu.\n\n7. Try a new recipe: Search online for recipes you've never tried before.\n\n8. Plan ahead: Use your Saturday to",
+      "expected_policy": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 4,
+      "user": "I started reading this book about the history of the internet and it's surprisingly interesting.",
+      "response": "That sounds like an exciting journey into the past! The internet has come a long way since its early days, with many technological advancements that have transformed how we communicate, access information, and conduct business. It's fascinating to see how far we've come and what new innovations might be on the horizon for the future of technology.",
+      "expected_policy": "neutral",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 5,
+      "user": "Rice, eggs, some vegetables, soy sauce... pretty basic stuff.",
+      "response": "Yes, rice, eggs and vegetables are all very simple ingredients that can be used to make many different types of dishes! Soy sauce is also an important ingredient in many Asian cuisines. It adds a savory flavor and umami taste to dishes. So it's not just basic stuff, but versatile and flavorful too!",
+      "expected_policy": "neutral",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 6,
+      "user": "I just got my paper back and I got an A! I worked so hard on that one.",
+      "response": "That's great to hear! Getting an A is definitely something to be proud of. Working hard always pays off in the end, and it's wonderful that you're able to achieve your goals. Keep up the good work and continue working towards even better results!",
+      "expected_policy": "playful",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 7,
+      "user": "My best friend from back home is coming to visit this weekend and I'm so excited!",
+      "response": "That's great news! I'm sure your friend will bring lots of fun surprises and memories for you both to cherish. Is there anything in particular that you're looking forward to doing together?",
+      "expected_policy": "playful",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 8,
+      "user": "My group project partner hasn't done a single thing and the deadline is in two days. I'm so done.",
+      "response": "I understand how frustrating it can be when your project partner isn't contributing to the work, especially if you're feeling overwhelmed by the deadline approaching quickly.\n\nHere are some steps you could take:\n\n1. Communicate: Reach out to your partner via email or chat with them politely but firmly to let them know that their lack of contribution is impacting the overall progress of the project.\n2. Assign tasks: If possible, assign individual tasks to each member of the team to help ensure everyone is on track.\n3. Find alternative solutions: Consider whether there's another way to complete the project without relying solely on one person's contributions.\n4. Seek support: If you feel like you don't have enough time to finish the project alone, consider reaching out to other members of your team for additional support or assistance",
+      "expected_policy": "tense",
+      "predicted_policy": "comforting",
+      "response_emotion": "lonely",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    },
+    {
+      "index": 9,
+      "user": "My professor gave me a C on an essay I spent weeks on and the comments are just 'needs more depth.' That's it. That's the entire feedback.",
+      "response": "I'm sorry to hear that you're feeling disappointed about your grade, but as an AI language model, I don't have access to specific information about your assignment or any other circumstances that may be relevant to your situation.\n\nHowever, in general, when someone receives feedback like \"needs more depth,\" it typically means that they could have written their essay with greater clarity, detail, and analysis of the topic. This doesn't necessarily mean that there was anything wrong with the overall quality of the work, but rather that there were areas where the writer could improve their writing skills.\n\nTo help yourself move forward, you might consider taking some time to reflect on what aspects of your essay could use improvement, and then seeking out resources or guidance from your professor or peers to help you develop those skills further. You might",
+      "expected_policy": "tense",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": null,
+      "memories": []
+    }
+  ]
+}

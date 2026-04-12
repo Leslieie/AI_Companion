@@ -43,3 +43,7 @@ wandb/
 # Project context files (not for git)
 CLAUDE.md
 ai_companion_repo_bootstrap.md
+.claude/
+
+# Eval run logs (keep JSON results, drop raw stdout)
+outputs/eval/*.log
