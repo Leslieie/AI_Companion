@@ -81,6 +81,12 @@ Store persistent facts about the user that span across sessions.
 - Sensitive information the user asks to forget
 - One-off filler messages with no informational content
 
+### Memory Capacity Limit
+
+- Maximum of 50 long-term memory entries.
+- When the limit is reached, the oldest entry is dropped before the new one is added.
+- This prevents unbounded memory growth while retaining the most recent and relevant facts.
+
 ## Memory Retrieval
 
 ### Current Approach (MVP)

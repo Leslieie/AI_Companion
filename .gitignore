@@ -47,3 +47,8 @@ ai_companion_repo_bootstrap.md
 
 # Eval run logs (keep JSON results, drop raw stdout)
 outputs/eval/*.log
+
+# Large dataset files (keep hand-curated annotations)
+data/processed/
+data/raw/
+data/splits/
