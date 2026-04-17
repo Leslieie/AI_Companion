@@ -3,7 +3,7 @@ torch_dtype: "auto"
 device_map: "auto"
 
 generation:
-  max_new_tokens: 160
+  max_new_tokens: 384
   temperature: 0.8
   do_sample: true
   top_p: 0.9
