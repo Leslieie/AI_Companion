@@ -440,6 +440,203 @@ def make_training_ready() -> None:
     print(f"Exported {len(clean)} samples to {out}")
 
 
+def combine_datasets() -> None:
+    """Combine downsampled public data + all team data, stratified split."""
+    random.seed(42)
+
+    # ── Rename old train_sft.jsonl so we don't overwrite it ──
+    public_path = PROCESSED_DIR / "train_sft.jsonl"
+    backup_path = PROCESSED_DIR / "train_sft_public_only.jsonl"
+
+    if backup_path.exists():
+        print(f"Backup already exists: {backup_path.name} (using it as public source)")
+        source_path = backup_path
+    elif public_path.exists():
+        public_path.rename(backup_path)
+        print(f"Renamed {public_path.name} -> {backup_path.name}")
+        source_path = backup_path
+    else:
+        print(f"Error: neither {public_path.name} nor {backup_path.name} found.")
+        return
+
+    # ── 1. Load public data, separate by source ──
+    print("\n--- Public data ---")
+    public_all = load_jsonl(str(source_path))
+    public_by_source: dict[str, list[dict]] = defaultdict(list)
+    for entry in public_all:
+        public_by_source[entry.get("source", "unknown")].append(entry)
+    for src in sorted(public_by_source):
+        print(f"  {src}: {len(public_by_source[src])}")
+
+    # ── 2. Load team data ──
+    print("\n--- Team data ---")
+    TEAM_FILES = [
+        "hengkai_generated_320.jsonl",
+        "intimacy_contrast_250.jsonl",
+        "yls_cleaned_v2.jsonl",
+        "pdd_cleaned_v3.jsonl",
+    ]
+    team_samples: list[dict] = []
+    for fname in TEAM_FILES:
+        fpath = PROCESSED_DIR / fname
+        if not fpath.exists():
+            print(f"  WARNING: {fname} not found, skipping.")
+            continue
+        entries = load_jsonl(str(fpath))
+        print(f"  {fname}: {len(entries)}")
+        team_samples.extend(entries)
+
+    # ── 3. Validate every entry ──
+    print("\n--- Validation ---")
+
+    def _validate(samples: list[dict], label: str) -> list[dict]:
+        valid: list[dict] = []
+        dropped = 0
+        for e in samples:
+            msgs = e.get("messages")
+            if not msgs or len(msgs) < 3:
+                dropped += 1
+                continue
+            valid.append(e)
+        if dropped:
+            print(f"  Dropped {dropped} invalid entries from {label}")
+        return valid
+
+    for src in list(public_by_source):
+        public_by_source[src] = _validate(
+            public_by_source[src], f"public/{src}",
+        )
+    team_samples = _validate(team_samples, "team")
+
+    # ── 4. Downsample public data ──
+    print("\n--- Downsampling public data ---")
+    CAPS: dict[str, int] = {
+        "empathetic_dialogues": 2000,
+        "dailydialog": 1500,
+        "personachat": 500,
+    }
+    NON_NEUTRAL_PREFERRED = {"empathetic_dialogues", "dailydialog"}
+
+    downsampled: list[dict] = []
+    for src, cap in CAPS.items():
+        pool = public_by_source.get(src, [])
+        if not pool:
+            print(f"  {src}: no data")
+            continue
+
+        if src in NON_NEUTRAL_PREFERRED:
+            non_neutral = [
+                e for e in pool if e.get("emotion", "neutral") != "neutral"
+            ]
+            neutral = [
+                e for e in pool if e.get("emotion", "neutral") == "neutral"
+            ]
+            random.shuffle(non_neutral)
+            random.shuffle(neutral)
+            selected = non_neutral[:cap]
+            remaining_quota = cap - len(selected)
+            if remaining_quota > 0:
+                selected.extend(neutral[:remaining_quota])
+        else:
+            random.shuffle(pool)
+            selected = pool[:cap]
+
+        print(f"  {src}: {len(pool)} -> {len(selected)} (cap {cap})")
+        downsampled.extend(selected)
+
+    for src, entries in public_by_source.items():
+        if src not in CAPS:
+            print(f"  {src}: {len(entries)} (unknown source, keeping all)")
+            downsampled.extend(entries)
+
+    # ── 5. Combine + shuffle ──
+    combined = downsampled + team_samples
+    random.shuffle(combined)
+    print(f"\nCombined total: {len(combined)}")
+
+    # ── 6. Stratified 90/10 split by source ──
+    print("\n--- Stratified train/val split ---")
+    by_source: dict[str, list[dict]] = defaultdict(list)
+    for entry in combined:
+        by_source[entry.get("source", "unknown")].append(entry)
+
+    train_set: list[dict] = []
+    val_set: list[dict] = []
+    for src in sorted(by_source):
+        entries = by_source[src]
+        if len(entries) < 10:
+            train_set.extend(entries)
+            print(f"  {src}: {len(entries)} all -> train (< 10 samples)")
+        else:
+            random.shuffle(entries)
+            n_train = max(1, int(len(entries) * 0.9))
+            train_set.extend(entries[:n_train])
+            val_set.extend(entries[n_train:])
+            print(f"  {src}: {n_train} train / {len(entries) - n_train} val")
+
+    random.shuffle(train_set)
+    random.shuffle(val_set)
+
+    # ── 7. Save four files ──
+    print("\n--- Saving ---")
+    save_jsonl(train_set, str(PROCESSED_DIR / "train_sft.jsonl"))
+    save_jsonl(val_set, str(PROCESSED_DIR / "val_sft.jsonl"))
+    save_jsonl(
+        [{"messages": e["messages"]} for e in train_set],
+        str(PROCESSED_DIR / "train_sft_clean.jsonl"),
+    )
+    save_jsonl(
+        [{"messages": e["messages"]} for e in val_set],
+        str(PROCESSED_DIR / "val_sft_clean.jsonl"),
+    )
+    print(f"  train_sft.jsonl:       {len(train_set)}")
+    print(f"  val_sft.jsonl:         {len(val_set)}")
+    print(f"  train_sft_clean.jsonl: {len(train_set)}")
+    print(f"  val_sft_clean.jsonl:   {len(val_set)}")
+
+    # ── 8. Summary table ──
+    PUBLIC_SOURCES = {"empathetic_dialogues", "personachat", "dailydialog"}
+
+    train_counts: dict[str, int] = defaultdict(int)
+    val_counts: dict[str, int] = defaultdict(int)
+    for e in train_set:
+        train_counts[e.get("source", "unknown")] += 1
+    for e in val_set:
+        val_counts[e.get("source", "unknown")] += 1
+
+    all_sources = sorted(set(train_counts) | set(val_counts))
+
+    print(f"\n{'=' * 62}")
+    print(f"  {'Source':<30} {'Train':>7} {'Val':>7} {'Total':>7}")
+    print(f"  {'-' * 58}")
+
+    total_train = total_val = 0
+    pub_train = pub_val = 0
+    team_train = team_val = 0
+
+    for src in all_sources:
+        t, v = train_counts[src], val_counts[src]
+        print(f"  {src:<30} {t:>7} {v:>7} {t + v:>7}")
+        total_train += t
+        total_val += v
+        if src in PUBLIC_SOURCES:
+            pub_train += t
+            pub_val += v
+        else:
+            team_train += t
+            team_val += v
+
+    print(f"  {'-' * 58}")
+    grand = total_train + total_val
+    print(f"  {'TOTAL':<30} {total_train:>7} {total_val:>7} {grand:>7}")
+    print()
+    team_total = team_train + team_val
+    pub_total = pub_train + pub_val
+    print(f"  Team data:   {team_total:>5} ({team_total / grand * 100:.1f}%)")
+    print(f"  Public data: {pub_total:>5} ({pub_total / grand * 100:.1f}%)")
+    print(f"{'=' * 62}")
+
+
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
@@ -452,6 +649,10 @@ def main() -> None:
     sub.add_parser("download", help="Download, convert, and filter datasets")
     sub.add_parser("merge", help="Merge processed files + annotations into train_sft.jsonl")
     sub.add_parser("export", help="Strip metadata -> train_sft_clean.jsonl (messages only)")
+    sub.add_parser(
+        "combine",
+        help="Downsample public + keep all team data -> train/val splits",
+    )
 
     args = parser.parse_args()
     if args.command == "download":
@@ -460,6 +661,8 @@ def main() -> None:
         merge_all()
     elif args.command == "export":
         make_training_ready()
+    elif args.command == "combine":
+        combine_datasets()
 
 
 if __name__ == "__main__":

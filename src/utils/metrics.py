@@ -161,6 +161,77 @@ def emotion_appropriateness(
     return correct / total if total > 0 else 0.0
 
 
+NEGATIVE_EMOTIONS = frozenset({
+    "sadness", "fear", "anger", "disappointment", "grief",
+    "embarrassment", "nervousness", "annoyance", "disgust",
+})
+POSITIVE_EMOTIONS = frozenset({
+    "joy", "excitement", "amusement", "love", "pride",
+})
+CARING_OR_POSITIVE = frozenset({
+    "caring", "love", "optimism", "approval", "admiration",
+})
+BROAD_POSITIVE = frozenset({
+    "joy", "excitement", "amusement", "love", "pride",
+    "admiration", "approval", "caring", "gratitude", "optimism", "relief",
+})
+
+_go_emo_pipeline = None
+
+
+def _get_go_emotions():
+    global _go_emo_pipeline
+    if _go_emo_pipeline is None:
+        from transformers import pipeline as hf_pipeline
+        _go_emo_pipeline = hf_pipeline(
+            "text-classification",
+            model="SamLowe/roberta-base-go_emotions",
+            top_k=1,
+            device=0 if torch.cuda.is_available() else -1,
+            truncation=True,
+        )
+    return _go_emo_pipeline
+
+
+def _classify_batch(texts: list[str]) -> list[str]:
+    pipe = _get_go_emotions()
+    results = pipe(texts, batch_size=32)
+    return [r[0]["label"] for r in results]
+
+
+def _is_appropriate(user_emo: str, resp_emo: str) -> bool:
+    if user_emo == "neutral" or user_emo not in NEGATIVE_EMOTIONS | POSITIVE_EMOTIONS:
+        return True
+    if user_emo in NEGATIVE_EMOTIONS:
+        return resp_emo in CARING_OR_POSITIVE or resp_emo == "neutral"
+    return resp_emo in BROAD_POSITIVE or resp_emo == "neutral"
+
+
+def response_appropriateness(
+    user_texts: list[str],
+    responses: list[str],
+) -> tuple[float, dict[str, dict[str, int]]]:
+    """Score response appropriateness using GoEmotions classifier.
+
+    Returns:
+        (accuracy, breakdown) where breakdown maps
+        user_emotion -> {response_emotion: count}.
+    """
+    user_emos = _classify_batch(user_texts)
+    resp_emos = _classify_batch(responses)
+
+    correct = 0
+    breakdown: dict[str, dict[str, int]] = {}
+    for u_emo, r_emo in zip(user_emos, resp_emos):
+        breakdown.setdefault(u_emo, {})
+        breakdown[u_emo][r_emo] = breakdown[u_emo].get(r_emo, 0) + 1
+        if _is_appropriate(u_emo, r_emo):
+            correct += 1
+
+    total = len(user_texts)
+    return (correct / total if total > 0 else 0.0), breakdown
+
+
 def distinct_n(texts: Iterable[str], n: int = 1) -> float:
     """Compute distinct-n: ratio of unique n-grams to total n-grams.
 

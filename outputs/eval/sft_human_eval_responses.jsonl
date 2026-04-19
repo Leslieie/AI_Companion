@@ -1,0 +1,50 @@
+{"id": 1, "user_message": "I feel so stressed about finals.", "sft_response": "Finals can really put a damper on your day-to-day life. Are you preparing enough?", "emotion": "anxious", "policy": "comforting"}
+{"id": 2, "user_message": "I just got accepted into my dream school!", "sft_response": "That is amazing! I wish you the best of luck!", "emotion": "neutral", "policy": "neutral"}
+{"id": 3, "user_message": "Nobody texted me back today.", "sft_response": "Oh man... did you try again?", "emotion": "lonely", "policy": "comforting"}
+{"id": 4, "user_message": "My professor is so unfair.", "sft_response": "Oh really? What's the issue?", "emotion": "neutral", "policy": "neutral"}
+{"id": 5, "user_message": "I had a great workout today.", "sft_response": "That's awesome! I love going to the gym. What type of exercise did you do?", "emotion": "happy", "policy": "playful"}
+{"id": 6, "user_message": "I don't know what I'm doing with my life.", "sft_response": "That's scary! What do you think you want to be when you grow up?", "emotion": "neutral", "policy": "neutral"}
+{"id": 7, "user_message": "I had a fight with my roommate.", "sft_response": "Oh no! I bet it was something small that made you mad. What happened?", "emotion": "neutral", "policy": "neutral"}
+{"id": 8, "user_message": "I got an A on my paper!", "sft_response": "That is great, I am glad to hear you did well.", "emotion": "neutral", "policy": "neutral"}
+{"id": 9, "user_message": "I feel like I don't belong here.", "sft_response": "Why do you say that?", "emotion": "neutral", "policy": "neutral"}
+{"id": 10, "user_message": "Haha that meme you'd love it.", "sft_response": "I don't like memes lol I just use them to make jokes about the internet.", "emotion": "neutral", "policy": "neutral"}
+{"id": 11, "user_message": "I miss my family back home.", "sft_response": "That's great that you have people who care about you here. How do they make you feel?", "emotion": "neutral", "policy": "neutral"}
+{"id": 12, "user_message": "I just finished a 12-hour study session.", "sft_response": "Wow that is some dedication to learning! What subject was it?", "emotion": "neutral", "policy": "neutral"}
+{"id": 13, "user_message": "My friend canceled on me again.", "sft_response": "Oh that sucks! I hope they're okay", "emotion": "neutral", "policy": "neutral"}
+{"id": 14, "user_message": "I got a job offer from my top choice!", "sft_response": "That's great! What kind of job is it?", "emotion": "neutral", "policy": "neutral"}
+{"id": 15, "user_message": "I can't sleep, too many thoughts.", "sft_response": "Yeah that's the worst.  I've tried so much to get better rest but still don't have it.", "emotion": "neutral", "policy": "neutral"}
+{"id": 16, "user_message": "I feel invisible sometimes.", "sft_response": "That can really get lonely. Do you have any specific moments where it feels that way?", "emotion": "neutral", "policy": "neutral"}
+{"id": 17, "user_message": "I aced my presentation today!", "sft_response": "That's amazing to hear, you must feel really proud of yourself.", "emotion": "neutral", "policy": "neutral"}
+{"id": 18, "user_message": "Everything feels pointless.", "sft_response": "I feel like my life is just this endless cycle of small moments without anything meaningful happening.", "emotion": "neutral", "policy": "neutral"}
+{"id": 19, "user_message": "I burned my dinner again lol.", "sft_response": "Oh no! Burnt dinners... terrible. I hope you got something good to eat later.", "emotion": "neutral", "policy": "neutral"}
+{"id": 20, "user_message": "My advisor said my research is promising.", "sft_response": "That's good news! I hope your work keeps progressing smoothly.", "emotion": "neutral", "policy": "neutral"}
+{"id": 21, "user_message": "I don't want to get out of bed.", "sft_response": "Why do you feel that way?  Do you need help getting out of bed?", "emotion": "neutral", "policy": "neutral"}
+{"id": 22, "user_message": "Just submitted my last assignment!", "sft_response": "Oh nice! What did you do for it?", "emotion": "neutral", "policy": "neutral"}
+{"id": 23, "user_message": "Why does everyone seem to have it together except me?", "sft_response": "Well, people usually just do what makes sense for them. Some are happier than others.", "emotion": "neutral", "policy": "neutral"}
+{"id": 24, "user_message": "I tried a new coffee shop and it was amazing.", "sft_response": "Wow that sounds good I would love to go there!", "emotion": "neutral", "policy": "neutral"}
+{"id": 25, "user_message": "I keep procrastinating and I hate myself for it.", "sft_response": "Yeah, that's tough. It takes time to learn how to handle it better. What has helped you get through this before?", "emotion": "neutral", "policy": "neutral"}
+{"id": 26, "user_message": "My dog is sick and I'm really worried.", "sft_response": "Oh my god that's terrible! How long have you been like this?", "emotion": "anxious", "policy": "comforting"}
+{"id": 27, "user_message": "I learned a new guitar chord today!", "sft_response": "That's awesome! What was it?", "emotion": "neutral", "policy": "neutral"}
+{"id": 28, "user_message": "I feel like nobody really listens to me.", "sft_response": "That's frustrating. What kind of stuff are you talking about?", "emotion": "lonely", "policy": "comforting"}
+{"id": 29, "user_message": "I just ran my first 5K!", "sft_response": "That's awesome! What was your time?", "emotion": "neutral", "policy": "neutral"}
+{"id": 30, "user_message": "I have three deadlines this Friday.", "sft_response": "That's good!  That means you've got your act together enough to do well on those things.  I'm sure that will make you feel great!", "emotion": "neutral", "policy": "neutral"}
+{"id": 31, "user_message": "My parents are pressuring me about my grades.", "sft_response": "I'm sorry to hear that. It can be tough when you have expectations set on your performance.", "emotion": "neutral", "policy": "neutral"}
+{"id": 32, "user_message": "I cooked a meal from scratch for the first time!", "sft_response": "That is awesome, what was it?", "emotion": "neutral", "policy": "neutral"}
+{"id": 33, "user_message": "I failed my driving test again.", "sft_response": "That is very frustrating! Do you have another chance?", "emotion": "neutral", "policy": "neutral"}
+{"id": 34, "user_message": "Someone complimented my work today.", "sft_response": "That's awesome! It's nice when someone acknowledges your hard work. What did they say?", "emotion": "neutral", "policy": "neutral"}
+{"id": 35, "user_message": "I feel so overwhelmed I could cry.", "sft_response": "Your emotions are real. It's okay to need space right now.", "emotion": "sad", "policy": "comforting"}
+{"id": 36, "user_message": "Not much going on. Just chilling.", "sft_response": "That's pretty nice. I like when people can just be themselves without pressure.", "emotion": "neutral", "policy": "neutral"}
+{"id": 37, "user_message": "I've been having headaches every day.", "sft_response": "That sounds awful, I hope it's nothing serious.", "emotion": "neutral", "policy": "neutral"}
+{"id": 38, "user_message": "I made a new friend in class today!", "sft_response": "That's awesome! What did you do together?", "emotion": "angry", "policy": "tense"}
+{"id": 39, "user_message": "I feel like giving up on this project.", "sft_response": "That's okay to say when you're not enjoying it anymore. What makes you think you'll ever be happy about it?", "emotion": "neutral", "policy": "neutral"}
+{"id": 40, "user_message": "The weather was beautiful today.", "sft_response": "That sounds nice! What did you do?", "emotion": "neutral", "policy": "neutral"}
+{"id": 41, "user_message": "I got rejected from another internship.", "sft_response": "Oh no! That must have been tough to hear. What did you do?", "emotion": "neutral", "policy": "neutral"}
+{"id": 42, "user_message": "I finished reading a really good book.", "sft_response": "That's nice! What did you read?", "emotion": "neutral", "policy": "neutral"}
+{"id": 43, "user_message": "My roommate keeps me up all night.", "sft_response": "Oh no, what did they do?", "emotion": "neutral", "policy": "neutral"}
+{"id": 44, "user_message": "I found out I got a scholarship!", "sft_response": "That's awesome! What kind of school?", "emotion": "neutral", "policy": "neutral"}
+{"id": 45, "user_message": "I don't know who to talk to about this.", "sft_response": "I'll listen if you want. What's going on?", "emotion": "neutral", "policy": "neutral"}
+{"id": 46, "user_message": "I cleaned my entire apartment today!", "sft_response": "That's pretty awesome. Do you feel accomplished?", "emotion": "neutral", "policy": "neutral"}
+{"id": 47, "user_message": "I said something stupid and I can't stop thinking about it.", "sft_response": "Oh no! That kind of thing happens to everyone. It's not like you're the first person who says those things. Just try not to dwell on it too much for now.", "emotion": "neutral", "policy": "neutral"}
+{"id": 48, "user_message": "I'm excited for the weekend!", "sft_response": "Really? What are you doing?", "emotion": "happy", "policy": "playful"}
+{"id": 49, "user_message": "Leave me alone.", "sft_response": "I can't handle this right now. Go away.", "emotion": "lonely", "policy": "comforting"}
+{"id": 50, "user_message": "Thank you for always being here.", "sft_response": "I try to keep my promise.", "emotion": "neutral", "policy": "neutral"}

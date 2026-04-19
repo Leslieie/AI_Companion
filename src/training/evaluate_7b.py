@@ -1,23 +1,23 @@
-"""Evaluation CLI for comparing companion model variants.
+"""Evaluation CLI for comparing 7B companion model variants.
 
 Modes:
-- plain:         base model, minimal system prompt, no state/memory/policy.
-- stateful:      base model with architecture modules (state + memory + policy).
-- stateful_sft:  LoRA-adapted model with architecture modules.
+- plain:         7B base model, minimal system prompt, no state/memory/policy.
+- stateful:      7B base model with architecture modules (state + memory + policy).
+- stateful_sft:  7B LoRA-adapted model with architecture modules.
 - all:           run plain, stateful, and stateful_sft sequentially, then
                  print a side-by-side comparison table.
 
 After generation, prints perplexity, emotion_appropriateness, distinct_1,
 and distinct_2, and saves both metrics and per-sample generated responses
-to outputs/eval/results_{mode}.json.
+to outputs/eval/results_{mode}_7b.json.
 
 Usage:
-    python -m src.training.evaluate \\
-        --model_path Qwen/Qwen2.5-1.5B-Instruct \\
-        --test_data data/annotations/reference_samples.jsonl \\
+    python -m src.training.evaluate_7b \\
+        --model_path Qwen/Qwen2.5-7B-Instruct \\
+        --test_data data/splits/test.jsonl \\
         --mode plain
 
-    python -m src.training.evaluate --mode all
+    python -m src.training.evaluate_7b --mode all
 """
 
 from __future__ import annotations
@@ -36,10 +36,12 @@ from src.modules.state_tracker import StateTracker
 from src.utils.metrics import compute_perplexity, distinct_n, response_appropriateness
 
 
+MODEL_NAME_7B = "Qwen/Qwen2.5-7B-Instruct"
+
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 OUTPUT_DIR = REPO_ROOT / "outputs" / "eval"
 DEFAULT_TEST_DATA = str(REPO_ROOT / "data" / "splits" / "test.jsonl")
-DEFAULT_SFT_PATH = str(REPO_ROOT / "outputs" / "checkpoints" / "sft_run_01" / "final")
+DEFAULT_SFT_PATH = str(REPO_ROOT / "outputs" / "checkpoints" / "sft_7b_run_01" / "final")
 
 PLAIN_SYSTEM_PROMPT = "You are a warm AI companion."
 DEFAULT_STATE: dict[str, int | str] = {
@@ -83,9 +85,7 @@ def _load_for_mode(model_path: str, mode: str) -> tuple:
     if mode == "stateful_sft":
         from peft import PeftModel
 
-        from src.inference.generate import MODEL_NAME
-
-        tokenizer, base_model = load_model(MODEL_NAME)
+        tokenizer, base_model = load_model(MODEL_NAME_7B)
         model = PeftModel.from_pretrained(base_model, model_path)
         return tokenizer, model
     return load_model(model_path)
@@ -97,11 +97,7 @@ def generate_responses(
     samples: list[dict[str, Any]],
     mode: str,
 ) -> list[dict[str, Any]]:
-    """Generate one response per test sample with the requested pipeline.
-
-    Each record captures both the response and enough metadata to compute
-    policy-matching accuracy downstream.
-    """
+    """Generate one response per test sample with the requested pipeline."""
     records: list[dict[str, Any]] = []
     for idx, sample in enumerate(samples):
         history, last_user = _extract_history(sample)
@@ -163,7 +159,7 @@ def _run_single_mode(
     """Run evaluation for one mode, save results, return metrics dict."""
     samples = _load_test_samples(test_data)
     print(f"\n{'=' * 60}")
-    print(f"  Mode: {mode}  ({len(samples)} samples)")
+    print(f"  Mode: {mode} [7B]  ({len(samples)} samples)")
     print(f"{'=' * 60}")
 
     tokenizer, model = _load_for_mode(model_path, mode)
@@ -200,12 +196,12 @@ def _run_single_mode(
         "perplexity": ppl,
     }
 
-    print(f"\n--- {mode} results ---")
+    print(f"\n--- {mode} [7B] results ---")
     for key, value in metrics.items():
         print(f"  {key}: {value}")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    out_path = OUTPUT_DIR / f"results_{mode}.json"
+    out_path = OUTPUT_DIR / f"results_{mode}_7b.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(
             {"metrics": metrics, "responses": records, "breakdown": breakdown},
@@ -213,7 +209,6 @@ def _run_single_mode(
         )
     print(f"  Saved to {out_path}")
 
-    # Free GPU memory before next mode
     import gc, torch
     del model, tokenizer
     gc.collect()
@@ -225,12 +220,12 @@ def _run_single_mode(
 
 def _print_comparison(all_metrics: list[dict[str, Any]]) -> None:
     """Print a side-by-side comparison table."""
-    labels = [m["mode"] for m in all_metrics]
-    header = f"{'Metric':<26}| " + " | ".join(f"{l:>14}" for l in labels)
+    labels = [f"{m['mode']} (7B)" for m in all_metrics]
+    header = f"{'Metric':<26}| " + " | ".join(f"{l:>18}" for l in labels)
     sep = "-" * len(header)
 
     print(f"\n{'=' * len(header)}")
-    print("  COMPARISON TABLE")
+    print("  COMPARISON TABLE (7B)")
     print(f"{'=' * len(header)}")
     print(header)
     print(sep)
@@ -247,20 +242,18 @@ def _print_comparison(all_metrics: list[dict[str, Any]]) -> None:
         for m in all_metrics:
             v = m.get(key)
             if v is None:
-                vals.append(f"{'N/A':>14}")
+                vals.append(f"{'N/A':>18}")
             elif isinstance(v, int):
-                vals.append(f"{v:>14d}")
+                vals.append(f"{v:>18d}")
             else:
-                vals.append(f"{v:>14.4f}")
+                vals.append(f"{v:>18.4f}")
         print(f"{label:<26}| " + " | ".join(vals))
 
     print(f"{'=' * len(header)}")
 
 
 def main() -> None:
-    from src.inference.generate import MODEL_NAME
-
-    parser = argparse.ArgumentParser(description="Evaluate companion model variants.")
+    parser = argparse.ArgumentParser(description="Evaluate 7B companion model variants.")
     parser.add_argument(
         "--model_path", default=None,
         help="Model id / path (or LoRA adapter path when --mode=stateful_sft).",
@@ -287,7 +280,7 @@ def main() -> None:
             if mode == "stateful_sft":
                 mp = sft_path
             else:
-                mp = MODEL_NAME
+                mp = MODEL_NAME_7B
             m = _run_single_mode(mode, mp, args.test_data, args.skip_perplexity)
             all_metrics.append(m)
         _print_comparison(all_metrics)
@@ -296,7 +289,7 @@ def main() -> None:
             if args.mode == "stateful_sft":
                 args.model_path = DEFAULT_SFT_PATH
             else:
-                args.model_path = MODEL_NAME
+                args.model_path = MODEL_NAME_7B
         _run_single_mode(
             args.mode, args.model_path, args.test_data, args.skip_perplexity,
         )

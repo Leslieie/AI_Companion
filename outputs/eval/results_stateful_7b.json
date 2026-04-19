@@ -1,21 +1,21 @@
 {
   "metrics": {
     "mode": "stateful",
-    "model_path": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_path": "Qwen/Qwen2.5-7B-Instruct",
     "num_samples": 200,
-    "response_appropriateness": 0.86,
-    "distinct_1": 0.2585146286571643,
-    "distinct_2": 0.7223511214230471,
-    "perplexity": 42.34892308485743
+    "response_appropriateness": 0.765,
+    "distinct_1": 0.2561321541798765,
+    "distinct_2": 0.687381322285517,
+    "perplexity": 95.39662090587238
   },
   "responses": [
     {
       "index": 0,
       "user": "It was great, contrary to what I thought.",
-      "response": "That's wonderful! It sounds like you found some fun amidst that night. What kind of fun did it involve?",
+      "response": "Glad to hear it turned out well! Sometimes our instincts can be cautious, but exploring despite those feelings can lead to unexpected positive experiences. Did you enjoy meeting new people there?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 51,
         "trust": 50,
@@ -29,7 +29,7 @@
     {
       "index": 1,
       "user": "Yes! We got some free drinks basically!",
-      "response": "Free drinks can be pretty nice sometimes. Maybe next time we should try to leave early just in case! How do you feel about that idea?",
+      "response": "Good for you for standing up for yourself! It’s important to feel heard and valued, especially in situations like that. How are you feeling now?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -46,7 +46,7 @@
     {
       "index": 2,
       "user": "She's feeling great! I'm so thankful she had such great doctors to treat her!",
-      "response": "That's wonderful to hear. It sounds like the combination of medical care and support was crucial. Is there anything you're hoping for during this time that might make it even better?",
+      "response": "That's wonderful news! It's amazing how much difference good care can make. How do you feel about seeing her through this journey?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -65,7 +65,7 @@
     {
       "index": 3,
       "user": "I was already five blocks away. I had to drink the gross coffee at the office. I usually dont buy coffee so I was trying to treat myself.",
-      "response": "It's okay, sometimes life happens and we don't always get what we want. At least you can use that money for something else now. If you ever feel like treating yourself again, remember, any amount of joy is worth celebrating!",
+      "response": "Oh no, that must have been frustrating! It's tough when you're trying something new and it doesn't go as planned. Did anything else good happen today to help balance out the morning?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -82,7 +82,7 @@
     {
       "index": 4,
       "user": "Yes, trust is essential, if you cant trust somebody then what are they good or honest?",
-      "response": "If someone isn't trustworthy, it's hard to rely on them for anything important. They might not be honest when they say they are, so that could lead to misunderstandings and hurt feelings down the road. It's worth putting effort into building trust because once it breaks, it takes time to rebuild.",
+      "response": "Absolutely, honesty and trust go hand in hand. Without them, it's hard to build a solid foundation of mutual respect and understanding. How are you feeling about the trust in your current situation?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -99,7 +99,7 @@
     {
       "index": 5,
       "user": "Because of the tarif war president Trump declare to the world.",
-      "response": "It sounds like your anxiety stems from external political events. How can I support you during this time?",
+      "response": "It can be really unsettling to hear about trade tensions and tariff wars. Do you feel like talking more about what specifically is causing your anxiety?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -118,10 +118,10 @@
     {
       "index": 6,
       "user": "Well it is my second marriage.. but hey at least its a long one.",
-      "response": "That's true! A long marriage can bring its own set of challenges, but also great comfort too. It sounds like you've got a strong foundation already, which is fantastic. How can I help make your journey more fulfilling?",
+      "response": "That's still an impressive length of time together! It must bring a lot of comfort and stability to your life. What do you think makes this relationship so enduring?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -137,7 +137,7 @@
     {
       "index": 7,
       "user": "Yes, I have a special place in my heart for classic music.",
-      "response": "That's wonderful! Classic music holds so much meaning and can evoke such emotions. How does it make you feel?",
+      "response": "That's wonderful! Music can hold such special places in our hearts. Did listening to your mom play Aretha make you feel close to her even now?",
       "expected_policy": "comforting",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -156,10 +156,10 @@
     {
       "index": 8,
       "user": "The whole clas",
-      "response": "Oh, that's quite the conversation starter! It sounds like you might have created quite an uproar with your comment. Let's focus on how we can approach this from a positive angle. How do you think you could use humor to bring joy back into the situation without making things awkward again?",
+      "response": "Oh no! That must have been quite embarrassing. Did your teacher react kindly, or were you worried about the consequences?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -173,7 +173,7 @@
     {
       "index": 9,
       "user": "Yes I messed up and ruined a good thing.  I was stressed at my job and took it out on her.  But I'm now self-employed living the dream and just wish she was still by my side",
-      "response": "It's understandable to feel this way when someone we care about hurts us like that. Perhaps consider writing her a letter expressing your gratitude and how much you miss her, even after everything. It might help bring some closure and show her that despite our differences, you're grateful for who she is.",
+      "response": "That's really tough to go through. It must feel like a bittersweet dream come true with your new career, but missing someone who meant so much can make it hard. How do you think reaching out to her might help or hurt this time around?",
       "expected_policy": "comforting",
       "predicted_policy": "reflective",
       "response_emotion": "neutral",
@@ -192,7 +192,7 @@
     {
       "index": 10,
       "user": "It is something that can be hard to deal with.",
-      "response": "Yes, it can definitely be frustrating. Sometimes people just don't want to hear what you have to say. How do you typically handle these situations?",
+      "response": "Absolutely, it can feel frustrating. It's like the other person isn't really interested in what you have to say. Have you found any ways to handle those situations better?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -209,10 +209,10 @@
     {
       "index": 11,
       "user": "Oh yeah, it's been good so far. Plus, we have social media to keep in touch.",
-      "response": "Absolutely! Technology helps bridge that gap. And remember, change is inevitable; embrace each new chapter as an opportunity for growth. Let me know if there’s anything else on your mind or if you need someone to talk things through.",
+      "response": "That's true! Social media can be a great way to stay connected. It's nice that you get to maintain relationships even as you move on to new opportunities. How do you think your old colleagues are adjusting?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -228,7 +228,24 @@
     {
       "index": 12,
       "user": "Well, I thought about opening it but I didn't. I don't know exactly what happened, but the police came and I heard them telling the man to go home, so maybe he was on something.",
-      "response": "That's definitely not good. Do you have any idea who this person is? Sometimes people get lost or confused.",
+      "response": "It's understandable to feel scared in situations like that. Are you feeling more safe now knowing it turned out alright?",
+      "expected_policy": "comforting",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
+      "state": {
+        "affection": 50,
+        "trust": 50,
+        "intimacy": 50,
+        "mood": "neutral",
+        "energy": 70
+      },
+      "policy_in_prompt": "neutral",
+      "memories": []
+    },
+    {
+      "index": 13,
+      "user": "Yeah!  I feel you.  It hurt my pride more than anything!",
+      "response": "Pride can take a hit in those moments, but remember, everyone trips sometimes. It's part of being human—and pretty hilarious when we think about it later! How did you handle the situation after? Did anyone offer help or were there any funny reactions from others around?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -243,29 +260,12 @@
       "memories": []
     },
     {
-      "index": 13,
-      "user": "Yeah!  I feel you.  It hurt my pride more than anything!",
-      "response": "Absolutely, feeling humiliated can be tough. But remember, everyone makes mistakes too. Maybe that trip could've been your moment for learning and growth? Just keep reminding yourself that nobody is perfect and every slip-up leads to something positive.",
-      "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "lonely",
-      "state": {
-        "affection": 50,
-        "trust": 50,
-        "intimacy": 50,
-        "mood": "neutral",
-        "energy": 70
-      },
-      "policy_in_prompt": "neutral",
-      "memories": []
-    },
-    {
       "index": 14,
       "user": "I have no idea where or what she was up to. I couldnt believe it when I saw here there.",
-      "response": "It's wonderful that you found your cat! Remembering such happy moments can help ease any sadness from the past. Maybe this new discovery has brought some joy back into your life.",
+      "response": "It must have been such a relief to finally see her. She's probably just glad to be back with you. Do you think she'll want to explore more now that she's safe?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -281,7 +281,7 @@
     {
       "index": 15,
       "user": "She is 16. I had no idea she was so talented. I'm so happy to be her aunt!",
-      "response": "Wow, that’s amazing! It must feel really special being part of someone so talented now reaching that age. Is there anything specific you want to talk about from the game or any tips on encouraging her further?",
+      "response": "It sounds like an incredibly proud moment for you! Being able to witness such talent in your niece must feel amazing. Does this make you reflect on any of the special moments you've shared with her?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -300,7 +300,7 @@
     {
       "index": 16,
       "user": "Emergency can always happen. Good that you had saved for that 4 months and were able to cover your car repair bills. Imagine if you haven't saved",
-      "response": "Absolutely! It’s great that you’re prepared. Life has unexpected twists, and it’s comforting to know we’ve taken steps to handle them financially. Remember, small savings habits lead to big savings goals. Keep up the good work!",
+      "response": "Absolutely, it’s great that you've been consistent with your savings. Having an emergency fund really does provide peace of mind. How do you feel about continuing this good habit?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -319,7 +319,7 @@
     {
       "index": 17,
       "user": "It seems like it doesnt it.. i hope it gets better.",
-      "response": "Hopefully it does improve soon. Your hard work shouldn't be taken advantage of. If you feel comfortable talking about this with others, we can offer some support to make things better together.",
+      "response": "Yeah, it can feel really frustrating. Have you thought about talking to your manager or HR about it? Sometimes expressing your concerns can lead to positive changes.",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -338,7 +338,7 @@
     {
       "index": 18,
       "user": "Yes, and my number was one away from the winning number!",
-      "response": "That's fantastic news! Winning a prize like this can really lift your spirits. How do you feel about having something so special happen to you?",
+      "response": "That must feel like a mix of excitement and disappointment. Have you had any chance to reflect on how close you were to winning?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -355,7 +355,7 @@
     {
       "index": 19,
       "user": "Not really,  he wanted me as a girlfriend",
-      "response": "It sounds like you might have some conflicting ideas about your personal boundaries and relationships. Maybe reassessing what's important to you could help clarify things. Is there anything specific you've been thinking about lately?",
+      "response": "It sounds like there might have been some confusion or miscommunication. How do you feel about the situation now?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -372,7 +372,7 @@
     {
       "index": 20,
       "user": "It didn't make me sick, but it definitely made me FEEL sick for a short period. I guess mostly mental.",
-      "response": "That's interesting! Mental discomfort from discovering something that shouldn't be there often happens to people who pay close attention to details like this. Maybe try keeping your food fresher by checking expiration dates more regularly?",
+      "response": "That's understandable. Sometimes our minds can play tricks on us and create lingering discomfort even after the physical issue is resolved. Are you feeling better now?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -389,10 +389,10 @@
     {
       "index": 21,
       "user": "I want to but I am afraid I might get sick.",
-      "response": "It sounds like you're feeling a bit nervous about trying something new. It’s understandable to be cautious when it comes to trying new things, especially if they involve unfamiliar foods. If you've tried sushi before without issues, then go for it! Just remember to listen to your body. If the experience is uncomfortable, stop immediately. The more you do this type of thing, the less likely it will seem risky.",
+      "response": "That makes sense; trying new foods can be nerve-wracking! Have you ever had sushi before? Knowing more about what to expect might help ease your worries.",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "anxious",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -409,10 +409,10 @@
     {
       "index": 22,
       "user": "Yes, it was to see who made the playoffs.",
-      "response": "It's understandable you're upset about missing out on that. Maybe we can find another way to support each other during this tough time. How do you feel about watching some sports together later?",
+      "response": "That's disappointing! It must feel like you missed out on something really significant. Do you think there will be another chance to see a playoff game soon?",
       "expected_policy": "tense",
-      "predicted_policy": "comforting",
-      "response_emotion": "sad",
+      "predicted_policy": "reflective",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 51,
@@ -428,7 +428,7 @@
     {
       "index": 23,
       "user": "kids go back to school!!!",
-      "response": "That sounds exciting! School can be both challenging and rewarding. What kind of activities do you plan to enjoy?",
+      "response": "That sounds exciting! Change can bring new routines and fresh beginnings. Are you looking forward to having more free time during the weekdays?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -445,10 +445,10 @@
     {
       "index": 24,
       "user": "my favort team won the foot ball macth",
-      "response": "That sounds like an exciting moment! Winning always brings happiness. How do you feel about cheering for your favorite team?",
+      "response": "That's fantastic! Winning feels so good, doesn't it? It's nice to have something to celebrate and be happy about. Does this victory make you feel especially proud of your team?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 51,
         "trust": 50,
@@ -462,10 +462,10 @@
     {
       "index": 25,
       "user": "That's what I'm trying to do, I might have to take out a payday loan which I don't want to do!",
-      "response": "Taking out a payday loan is like borrowing money from someone with a very short time frame, usually just until next payday. It can cause financial stress now and leave you even more stressed about the future. What if you could get by for a few days without it, maybe by using your savings or finding extra income?",
+      "response": "It sounds stressful. Have you thought about contacting your lender to explain the situation? Sometimes they offer temporary extensions or alternative payment plans.",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "anxious",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -482,10 +482,10 @@
     {
       "index": 26,
       "user": "He stared at me weird. Once i noticed him, I became unease.",
-      "response": "It sounds like you may have been feeling uneasy around this person. Is there anything specific about the interaction that made you feel uncomfortable? It might help to try talking with them directly if possible.",
+      "response": "That can be really uncomfortable when someone stares at you in an odd way. It's good that you noticed and felt uneasy; trusting your instincts is important. How are you feeling now?",
       "expected_policy": "comforting",
-      "predicted_policy": "tense",
-      "response_emotion": "angry",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -499,7 +499,7 @@
     {
       "index": 27,
       "user": "Such is life but, the best we can do is find pieces of the old emotions we cherish in modern item. Like the smell of dishsoap my grandmother used to use.",
-      "response": "Yes, nostalgia has a way of connecting us to our past while making room for new experiences too. It's beautiful how we keep these little reminders of joy around us.",
+      "response": "That's beautifully put. Those small, cherished moments really do stay with us, don't they? Do you think there's anything specific about your Gamecube that holds these special memories for you?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -516,10 +516,10 @@
     {
       "index": 28,
       "user": "Yeah, it was very embarrassing. I swear to god, I thought I was the only one there!",
-      "response": "It's great you realized quickly, though. Being aware of others' presence can help prevent such awkward situations. Maybe you'll remember this next time too!",
+      "response": "It's understandable to feel embarrassed, but it happens to everyone sometimes. Nobody else probably noticed since you were focused on what you needed to do. How are you feeling about it now?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "comforting",
+      "response_emotion": "lonely",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -533,10 +533,10 @@
     {
       "index": 29,
       "user": "Totally! You know you're doing something wrong when youre sneaking into the kitchen haha",
-      "response": "Ah yes, it's so easy to sneak up on ourselves sometimes isn't it? But don't worry, taking responsibility for those cookies is already a big step towards self-care. Let's focus on making healthier choices next time, okay?",
+      "response": "It's totally okay to indulge every now and then. How about we plan a healthier snack for today? Something that makes you happy but won't leave you feeling too guilty later. What do you think?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -552,7 +552,7 @@
     {
       "index": 30,
       "user": "Me too, but he didnt have to broadcast it to everyone like that.",
-      "response": "That must've been tough for you. It's not easy having someone treat you this way, especially in front of others. Maybe consider reaching out to him to discuss how things can improve without making matters worse. Communication is key, both with your brother and with yourself.",
+      "response": "That must have felt really tough to experience in front of your whole family. How do you feel about it now? Has it changed how you think about yourself or your relationship with your brother?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -569,7 +569,7 @@
     {
       "index": 31,
       "user": "That's true.. I guess I hadn't thought of that. I kind of just framed it as, \"Aren't I good enough? Then your search should be over!\" But it would be dumb not to explore all options available. But this waiting is rough...",
-      "response": "It can definitely feel disheartening when something isn’t happening immediately. Remember though, interviews often happen in phases. If there’s an open position with similar skills, you might still get offered another opportunity sooner than expected. Stay positive but also patient—your future could come from unexpected places!",
+      "response": "It can definitely feel discouraging when you're eager for feedback. Remember, every interview helps build your experience and confidence. How about we come up with some fun activities to distract you from the wait? What sorts of things make you smile or take your mind off work stuff?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -588,7 +588,7 @@
     {
       "index": 32,
       "user": "Well, lately he has been taking his time getting home and it's making me late!",
-      "response": "It sounds like this is causing stress for both of you. Perhaps you could start by setting clear expectations about your schedules and respecting each other's commitments. It might also help if you communicate more openly about how these situations impact you emotionally. Remember that communication can often make things easier when people feel understood and respected.",
+      "response": "I understand how frustrating that must be for you. It’s tough when things don’t go as planned. Have you tried talking to him about your concerns? Sometimes opening up can help clarify expectations and find a solution that works for both of you.",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -607,10 +607,10 @@
     {
       "index": 33,
       "user": "Its not the best",
-      "response": "It's understandable to feel frustrated like you did. It can be tough being on the receiving end of unreasonable treatment from landlords. How do you usually handle situations where things aren't going as planned?",
+      "response": "It really can be stressful, especially when it feels like things are out of your control. Have you talked to your landlord about the issue yet? Sometimes opening up communication can help find a solution.",
       "expected_policy": "tense",
-      "predicted_policy": "tense",
-      "response_emotion": "angry",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -624,7 +624,7 @@
     {
       "index": 34,
       "user": "Awesome, that is so fun to do. I spent all day figuring out how to program my Commodore. It was a treat when I figured out how to load some games.",
-      "response": "Wow! Programming your Commodore must have been quite an adventure. What game did you manage to load?",
+      "response": "Building your own computer must have felt incredibly rewarding! Programming and discovering new things like loading games on your Commodore can be really exciting. Did you find any particular game or project especially satisfying?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -641,7 +641,7 @@
     {
       "index": 35,
       "user": "no i didnt see anyone when i got back to my car",
-      "response": "That's understandable. Sometimes our perceptions can be skewed by what we expect or what happened just before or after the incident. It sounds like a good idea to check around your vehicle carefully for any small damage that might not have been noticed initially. If everything looks fine, there's nothing to worry about. Just make sure to take extra care with your vehicle from now on.",
+      "response": "I understand how frustrating that can be. It must feel like something unexpected happened to your belongings. Have you thought about reporting it to the authorities just in case?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -658,7 +658,7 @@
     {
       "index": 36,
       "user": "To the CEO of the company, no, I didn't. I feel confident.",
-      "response": "That's great! Confidence is key. Just remember, even if things don't go perfectly, they can still be a learning experience. Keep up your positive attitude and you'll do fine. What would you like to work on for this presentation?",
+      "response": "That's great confidence to have! Sometimes stepping into new territory can be exciting. Do you have any tips for calming nerves before a big presentation?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -677,7 +677,7 @@
     {
       "index": 37,
       "user": "I am sure he will, we have been together for what seems like forever.",
-      "response": "Wow, that's quite a long time you've been with him! Congratulations on your upcoming proposal. How does it feel?",
+      "response": "It sounds like you two have a really special bond. How do you feel about the upcoming proposal?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -697,7 +697,7 @@
     {
       "index": 38,
       "user": "Yeah, and the total opposite happens, I thought France wouldn't even make it past the first round!",
-      "response": "Yes, it's always surprising to see such unexpected outcomes like that. Football is full of surprises sometimes. Maybe next time we can talk about something more predictable!",
+      "response": "It's always exciting when things don't go according to expectations. Did you feel a mix of surprise and joy as France progressed?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -714,7 +714,7 @@
     {
       "index": 39,
       "user": "They are, I am so thankful for them!",
-      "response": "It's wonderful to know you feel that way about your friends. Is there anything specific you'd like to discuss or talk about?",
+      "response": "It sounds like you have incredibly supportive friends. How do you feel about having such wonderful people in your life?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -734,7 +734,7 @@
     {
       "index": 40,
       "user": "I could never ever do it!",
-      "response": "Understandable. That's what makes us who we are—our values and sense of morality. Perhaps discussing other ways we might connect with each other could be more beneficial for both parties.",
+      "response": "That's completely understandable. Everyone has different limits and comfort zones when it comes to such extreme scenarios. It's important to respect those boundaries. How else can I support you today?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -751,7 +751,7 @@
     {
       "index": 41,
       "user": "Yes! She not only was the fastest at the race she set anew record for her school!!",
-      "response": "That's amazing! She deserves all the glory on that day. Celebrate with her as much as you can, it was such an exciting moment for everyone involved.",
+      "response": "That's amazing! Setting a new record is such an achievement. How proud you must feel of her! Do you have any specific moments from watching her compete that stood out to you?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -768,7 +768,7 @@
     {
       "index": 42,
       "user": "I did amazing, I know I did, I had to",
-      "response": "That's great to hear! Did you enjoy the experience itself, or just the end result?",
+      "response": "That's wonderful! It sounds like all your practice really paid off. How excited are you to see how others perceived your performance?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -785,10 +785,10 @@
     {
       "index": 43,
       "user": "Lots of Ja Rule and Nelly. Talk about a long time ago. Felt like I was in high school again.",
-      "response": "That's wonderful! Those were some great years. What do you think makes those songs feel nostalgic for you?",
+      "response": "It's amazing how music can transport us back in time, isn't it? Those artists had quite the run! How do you feel looking back at that period?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -802,7 +802,7 @@
     {
       "index": 44,
       "user": "I always do.  I would never cheat on her.",
-      "response": "It sounds like you're taking good care of your relationships. If there’s anything specific you need help with, feel free to ask.",
+      "response": "It sounds like your commitment means a lot to both of you. How does she express her love back to you?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -821,10 +821,10 @@
     {
       "index": 45,
       "user": "My friend has been diagnosed with cancer recently but I have been helping her out by paying her visits everyday",
-      "response": "That's wonderful of you to be there for your friend during such a tough time. It must be really hard, but it sounds like you're doing a great thing. How can I support you through this?",
+      "response": "That's so kind of you to support your friend during this tough time. It can be really rewarding to help someone we care about, even if it means putting in extra effort. How are you feeling about all of this?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "reflective",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 51,
@@ -841,7 +841,7 @@
     {
       "index": 46,
       "user": "I think next week we will have to put her down.",
-      "response": "That's a tough decision, I understand. Losing a pet can bring up many emotions. Maybe it would help if we talked more about your feelings and how this makes you feel?",
+      "response": "That must be incredibly difficult for you and your family. Can you talk about how you're feeling about it? Sometimes sharing our thoughts can help ease some of the burden.",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -858,10 +858,10 @@
     {
       "index": 47,
       "user": "I should!  I am so upset about it!",
-      "response": "It’s okay to feel upset; it means someone is taking their responsibilities seriously. Let's focus on what we can control: how we respond and communicate our needs. Maybe talking to them directly will help resolve this issue. Remember, they probably don't know how much inconvenience your lack of trash has caused until someone points it out to them.",
+      "response": "It's completely understandable to be frustrated when your garbage isn't picked up. It can really disrupt your day. Have you tried calling them yet? Sometimes they have issues and an extra call might help get things back on track.",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "sad",
+      "predicted_policy": "tense",
+      "response_emotion": "angry",
       "state": {
         "affection": 50,
         "trust": 51,
@@ -877,10 +877,10 @@
     {
       "index": 48,
       "user": "It comes out in december!",
-      "response": "That's exciting! I'm looking forward to seeing how the new version compares with the original. What do you think could be different this time around?",
+      "response": "Oh, December sounds like a great time to dive into some fun gameplay with friends or solo. Are you excited to try out all the new characters?",
       "expected_policy": "playful",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -894,7 +894,7 @@
     {
       "index": 49,
       "user": "I might, maybe I just need to give it another shot",
-      "response": "Maybe you could try playing through a tutorial first to get an understanding of how it works? Sometimes that can help overcome initial confusion.",
+      "response": "Sometimes a little more time can help reset our expectations. Maybe there's something else fun you could try in the meantime?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -911,7 +911,7 @@
     {
       "index": 50,
       "user": "I hope so too, or else my GPA is screwed.",
-      "response": "That's understandable, but remember, each grade reflects your effort and potential, even if the outcome wasn't what you wanted right now. Focus on moving forward positively. How about taking some time to reflect on what went well that semester?",
+      "response": "GPA can definitely be stressful! Have you talked to your professor about any ways to improve? Sometimes extra credit or office hours can make a big difference.",
       "expected_policy": "comforting",
       "predicted_policy": "reflective",
       "response_emotion": "neutral",
@@ -928,10 +928,10 @@
     {
       "index": 51,
       "user": "Yes, it has been some years not, but I really was. He was in Karate for 8 years at that time.",
-      "response": "It's great that your son worked hard to get his black belt! It takes dedication and perseverance to achieve something like that. Is there anything specific you'd like to talk about?",
+      "response": "Eight years is quite an investment! That's amazing dedication from both your son and yourself as his support system. Did you get to witness the ceremony when he received his black belt?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -945,7 +945,7 @@
     {
       "index": 52,
       "user": "i would love to do that, but for some reason im always at the wrong place at the wrong time",
-      "response": "Ah, I understand where you're coming from. Sometimes life can throw curveballs like those, even when we'd like things to go smoothly. It might be helpful to find alternative ways to support your team while they handle emergencies—maybe by sending care packages or offering extra breaks during shifts? That way, you can still show your appreciation without being directly involved in the tasks. Let me know how that sounds!",
+      "response": "That must be really frustrating! It sounds like you're dealing with a challenging situation. Have you considered talking to your supervisor about the frequency of these incidents? They might be able to provide some support or find a way to handle the cleanup more effectively.",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -962,7 +962,7 @@
     {
       "index": 53,
       "user": "It was around $100 or so. In the end, the value to me was more than the money.",
-      "response": "That sounds like you found something deeper and more meaningful with that watch. It’s wonderful how your appreciation evolved from its monetary worth to its sentimental value. Sometimes, experiences can be richer than material possessions, and they’re what truly define our hearts. What other treasures have you found along life's journey?",
+      "response": "That's wonderful that you prioritized the emotional significance over the monetary gain. Sometimes, keeping things that hold sentimental value can create stronger connections and positive memories. How does this decision make you feel overall?",
       "expected_policy": "comforting",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -979,7 +979,7 @@
     {
       "index": 54,
       "user": "It was calculus and i hadn't done it in 2 years.",
-      "response": "That sounds challenging. It's great to hear you're revisiting this subject matter with your studies. Have you found any particular aspects of calculus that you find particularly tricky right now?",
+      "response": "That's great to hear you felt comfortable with the material! It must feel reassuring to see their progress and understanding. How does knowing this make you feel overall?",
       "expected_policy": "comforting",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -996,10 +996,10 @@
     {
       "index": 55,
       "user": "It is a BMW.  I am very happy about it!",
-      "response": "That sounds like a great gift for your parents! How exciting to get such a luxurious ride. Do they love it as much as you do?",
+      "response": "That's amazing! A BMW would make for a fantastic gift. How do you feel about being able to give them something so special?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 51,
         "trust": 50,
@@ -1015,7 +1015,7 @@
     {
       "index": 56,
       "user": "It turn out the receptionist wanted to give it in adoption and but it there for show, it was certainly really crazy to see a puppy standing there!",
-      "response": "It sounds like your day got an unexpected twist of joy! What was the receptionist’s name again? Maybe we can find out more about the pet and its story together.",
+      "response": "A puppy surprise like that can definitely brighten up someone's day—or make you jump! Did you get to spend any time with the little guy?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1032,10 +1032,10 @@
     {
       "index": 57,
       "user": "He was indeed. I shouldn't have gotten so hammered last night and lost them.",
-      "response": "It's great to feel appreciated by your friends, especially when they go out of their way. Maybe you could use this as an opportunity to learn from the mistake and be more careful next time. Remember, it’s okay not to get everything right all the time!",
+      "response": "It's understandable to feel a bit embarrassed when things don't go as planned. Your friend returning the shoes shows how much he cares about you. How do you think you'll approach this situation moving forward?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1049,10 +1049,10 @@
     {
       "index": 58,
       "user": "I do not cut myself. I generally the service provider for it. The yard is not that big though. I think I should learn doing it myself",
-      "response": "it's great that you're willing to take on more responsibility! gardening can be very rewarding and even more fulfilling once you get into it. maybe start by just cutting a few spots first and see how it goes from there. you might find you enjoy it quite a bit! good luck!",
+      "response": "It can be quite a task, but learning to mow your own lawn could definitely save you some stress. Maybe start with just once to see how it goes? What kind of mower do you have, and does it come with any instructions that might help get you started?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1066,7 +1066,7 @@
     {
       "index": 59,
       "user": "It definitely is stressing me out and I'm trying not to think too far into all the possibilities.  I'll feel sick until I get to talk to them tomorrow.",
-      "response": "It's understandable to feel anxious when uncertainty surrounds health matters. Remember, it's okay to take things slow and seek support if needed. What specific thoughts do you have right now?",
+      "response": "That sounds really tough. It's normal to feel anxious when there’s uncertainty. Do you have anyone you can talk to about this now to help ease your mind?",
       "expected_policy": "comforting",
       "predicted_policy": "comforting",
       "response_emotion": "anxious",
@@ -1085,7 +1085,7 @@
     {
       "index": 60,
       "user": "My sister done called me. She will pay me a surprise visit this week!",
-      "response": "That's wonderful! Exciting times ahead. How do you feel about the prospect of spending time with your sister again?",
+      "response": "That's wonderful! A surprise visit from your sister must make you feel happy and excited. How do you think she'll like the place you're staying?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -1104,10 +1104,10 @@
     {
       "index": 61,
       "user": "I work in marketing. It's kinda cut throat sometimes.",
-      "response": "Ah, the competitive world of marketing can be intense. Remember though, your hard work isn't just for yourself; it's also helping others within your team succeed. Keep up the great work!",
+      "response": "That can be tough, always feeling the pressure to perform well. How do you usually handle those stressful moments?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1123,7 +1123,7 @@
     {
       "index": 62,
       "user": "It's going to be a Korean!",
-      "response": "That sounds amazing! Which part of the process are you thinking about starting first? Planning menus, finding suppliers, or marketing?",
+      "response": "A Korean restaurant sounds amazing! Do you have any specific dishes or themes in mind that you're really passionate about including?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1142,10 +1142,10 @@
     {
       "index": 63,
       "user": "I decided to get dirty blonde highlights, just to add some dimension to my hair. I feel so beautiful now!",
-      "response": "That's wonderful! Highlights can really make your hair pop. Do you have any favorite places for a good cut?",
+      "response": "Dirty blonde highlights sound lovely—such a fun way to add some sparkle! How do you think your new look makes you feel today?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1159,7 +1159,7 @@
     {
       "index": 64,
       "user": "I was empathetic. It also make me feel thankful for my blessings.",
-      "response": "That's a wonderful way to look at it! Feeling grateful during difficult times can strengthen your bond with others. Perhaps consider reaching out if you're able.",
+      "response": "It's wonderful that you felt grateful. Sometimes seeing others' struggles can really put our own blessings into perspective. Does this kind of experience often inspire you to think more about your life and what you're grateful for?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -1176,7 +1176,7 @@
     {
       "index": 65,
       "user": "I don't think she has any idea how nosy and irritating she is.  She continually will tell our girls how their father and I are doing things wrong.",
-      "response": "It sounds like she's not aware of the boundaries you've set up with your family dynamics. Perhaps it would help if she had more respect for your privacy and decisions regarding your marriage and parenting. It might also be helpful to have open communication about expectations and personal space within your household. Maybe suggesting some mutual understanding could soften the tension between you all.",
+      "response": "It must feel really frustrating when someone consistently comments on things you're handling yourself. Have you tried talking to her about how her comments make you and your family feel? Sometimes they might not realize the impact of their words until it's brought to their attention.",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1193,7 +1193,7 @@
     {
       "index": 66,
       "user": "That sounds awesome, I'm so stuffed but I would still go for some seafood",
-      "response": "Ah, the joys of indulgence! It's all about enjoying yourself to the fullest, even when you're feeling full. How was your meal?",
+      "response": "It's always tempting, isn't it? Seafood can be so delicious. Did you try any new dishes?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1212,10 +1212,10 @@
     {
       "index": 67,
       "user": "they do and as long as the beat the yankees i like it",
-      "response": "That's great to hear you feel that way about your team. Let's focus on supporting each other through our shared interests and passions. How can we make sure we're both aligned with the excitement?",
+      "response": "I can understand that! The Yankees can be quite the rivals. How does watching the game affect your mood?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1231,10 +1231,10 @@
     {
       "index": 68,
       "user": "Yes, I just eat a decent diet.",
-      "response": "It sounds like you're doing well on that front! Do you have any tips for maintaining this healthy eating habit?",
+      "response": "Sounds like you've found a healthy balance that works for you. That's really wonderful to hear! Do you have any tips on how you maintain your good eating habits?",
       "expected_policy": "playful",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 51,
         "trust": 50,
@@ -1250,7 +1250,7 @@
     {
       "index": 69,
       "user": "Need time on the fMRI, and you?",
-      "response": "That sounds like an exciting project to work on. When can we talk more about it?",
+      "response": "That sounds exciting! What kind of research do you plan to do with the fMRI? And what about you—do you have any upcoming projects or goals?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1267,7 +1267,7 @@
     {
       "index": 70,
       "user": "Me too, it's so relaxing. I can't stand boring sunny days..",
-      "response": "Exactly! Rain adds something special to life. Maybe we could plan an adventure during this nice day instead?",
+      "response": "Sunny days can be nice too, but there's something cozy about a light drizzle, isn't there? What do you like to do on rainy days?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1284,7 +1284,7 @@
     {
       "index": 71,
       "user": "Thanks.  Yeah, I'm trying to figure out what kind of coverage I have if I just purchased it.  It might have still been on the other persons insurance.  I had to take off work and am losing money all around.",
-      "response": "It sounds like having to deal with an unexpected event like that could be quite stressful. Since the vehicle isn't under your insurance, contacting the other person who owned the car is likely the best course of action for getting the repairs covered. Letting them know about the accident may help resolve some issues. Don't forget to check any discounts or special deals they might offer for being part of your insurance company.",
+      "response": "It sounds like a frustrating and stressful situation. Have you tried contacting the other driver's insurance company? They should be able to help clarify if their policy covers incidents like this. Also, don't forget to check with your bank or credit card companies; sometimes they offer some form of protection for such losses. How is your mood holding up as you navigate through this?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1304,7 +1304,7 @@
     {
       "index": 72,
       "user": "It was physics, which is my least favorite subject.",
-      "response": "Physics can be tough! What did you learn that you found particularly challenging about the course?",
+      "response": "Physics can be challenging, especially when it's not your strongest area. How do you feel about that?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1321,7 +1321,7 @@
     {
       "index": 73,
       "user": "Oh how much? I cheated on a test and got caught.  My teacher wrote \"cheater\" on it and my mom saved it and I saw that test often",
-      "response": "I'm sorry to hear about those experiences. It can be difficult to come clean sometimes, but honesty is always important. Perhaps there are ways we can look back on these past actions without guilt?",
+      "response": "That must have been tough to face the consequences. It's interesting how those experiences can shape our perspectives as we grow older. Do you think there's anything you've learned from that experience that helps guide you now?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1338,10 +1338,10 @@
     {
       "index": 74,
       "user": "Yes, we had a great time. We are planning to see each other this week.",
-      "response": "That sounds like it will be wonderful! Can you tell me more about your plans with them?",
+      "response": "That sounds exciting! It's always nice to reconnect with old friends after such a long gap. Are you looking forward to seeing them again?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 51,
         "trust": 50,
@@ -1355,7 +1355,7 @@
     {
       "index": 75,
       "user": "I got laughed at a lot and sat down haha",
-      "response": "Oh no, that must have been tough for you. Remembering those moments can help you understand how much you've grown since then. How do you feel about these events now compared to when they occurred?",
+      "response": "It's understandable to feel self-conscious about that moment. But remember, it's just a small part of who you are now. How do you think about that experience today?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1372,10 +1372,10 @@
     {
       "index": 76,
       "user": "Yeah he was really frustrated with me. I really hope he forgives me, and lets me make it up to him.",
-      "response": "It's understandable to feel guilty about missing something important like this. Maybe you could offer your support by talking through how the situation unfolded and see if there’s anything he needs from you now that he’s calmer. Sometimes reassurance can go a long way!",
+      "response": "It's understandable to feel worried about making things right. Sometimes a simple apology can go a long way. Have you thought about how you might explain your situation and offer to make it up to him?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1389,7 +1389,7 @@
     {
       "index": 77,
       "user": "I have a team leader who I can try to report it to but he always seems to brush me off. It's getting old at this point!",
-      "response": "It sounds like you're feeling worn out from dealing with these issues. How about reaching out to HR for support? They might be able to help resolve the issue more effectively than your direct supervisor could. Do you want to brainstorm some strategies to handle this situation better moving forward?",
+      "response": "That must feel really disappointing. Have you considered talking to HR about the issue? They might be able to help address it more effectively.",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1409,10 +1409,10 @@
     {
       "index": 78,
       "user": "Much better, and I knew she would take good care of him",
-      "response": "I'm glad you're happy to hear that your son feels well again. It's always reassuring when someone else takes good care of our loved ones. How has the experience made you feel closer to your parents-in-law?",
+      "response": "Glad to hear your son is doing much better! It's comforting to know you have someone you can rely on like that. How are you feeling about the situation now?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1426,7 +1426,7 @@
     {
       "index": 79,
       "user": "He is more worried about having a social life it seems. He failed 2 classes last semester.",
-      "response": "That's understandable. Maybe he could talk to his teachers about what might have gone wrong with the classes. Sometimes students need support from their peers too. It sounds like your son is trying hard, but sometimes it feels overwhelming. Perhaps finding a study group for him would help.",
+      "response": "I'm sorry to hear that. It must be tough watching him go through these changes. How do you think he feels about his new priorities?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1443,7 +1443,7 @@
     {
       "index": 80,
       "user": "Thank you! do you have kids?",
-      "response": "No children, but I understand the joy that can come with milestones like your son taking his first steps. It must be special to see them grow up so fast.",
+      "response": "I don't have personal experiences like having children, but I can imagine how special those moments are! Do you want to share more about your experience with your son's milestones?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1460,7 +1460,7 @@
     {
       "index": 81,
       "user": "No. My dog eats any food available to her so it's pretty believable.",
-      "response": "It sounds like an innocent misunderstanding that both of you can laugh about now. How does this make you feel today?",
+      "response": "It sounds like your dog is quite opportunistic! Sometimes these little misunderstandings can lead to some good laughs. How did that make you feel about your sister?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1477,7 +1477,7 @@
     {
       "index": 82,
       "user": "It's too to go now unfortunately.",
-      "response": "That must be tough. Maybe next time you'll get well sooner! Take care of yourself, Ari.",
+      "response": "A bummer! It must be tough not being able to enjoy that time together. Are there any plans for the future where you can still spend some quality time with your friend?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1494,7 +1494,7 @@
     {
       "index": 83,
       "user": "Yup i'm ready for anything!",
-      "response": "It sounds like you're up for some new adventures now that you've reached your goal weight! How about we chat more about what kind of activities might interest you?",
+      "response": "Sounds like you're full of energy and confidence. What's next on your list?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1513,10 +1513,10 @@
     {
       "index": 84,
       "user": "Yea it makes me want to just walk back inside and go back to sleep and ignore everything",
-      "response": "Ah, that sounds like a frustrating situation indeed. Let's try some simple steps you can take next time to avoid leaving lights on when driving: make sure you turn off your vehicle entirely before starting it again if possible. Also, consider using a smart key system that cuts power once you open the door, as you mentioned earlier about needing to leave things turned on for longer periods. If you're still having issues after trying these, perhaps look into installing an additional battery to help keep up with the demands of being in a moving vehicle all the time.",
+      "response": "Feeling overwhelmed can definitely make things seem easier if we avoid them. Is there something specific that might help you tackle this task without feeling too stressed?",
       "expected_policy": "tense",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1530,7 +1530,7 @@
     {
       "index": 85,
       "user": "It was pretty fun",
-      "response": "That's wonderful! Friends can make such a big difference in our lives. What did you do specifically?",
+      "response": "That's wonderful! Sharing time with friends can really lift our spirits. Did you do anything special during your get-together?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -1547,7 +1547,7 @@
     {
       "index": 86,
       "user": "well I feel bad because I used it... on some drugs that I needed.",
-      "response": "It's understandable to feel conflicted about using substances like drugs, especially if they were necessary for your health. It could be helpful to talk to someone who can provide support, whether it's a friend, family member, or professional. Perhaps consider seeking guidance from a counselor or therapist to help navigate this situation. Remember, recovery is possible, and there are resources available to assist you along the way.",
+      "response": "I understand why you might feel bad about using his money for something like that. It's important to address this with your brother honestly. Have you considered talking to someone else about what happened? Sometimes speaking to a counselor can help sort through these tough situations.",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1567,7 +1567,7 @@
     {
       "index": 87,
       "user": "yes it makes me feel nice and not too tipsy",
-      "response": "That sounds like a good compromise! Enjoy your beer without feeling too intoxicated. Is there anything else you'd like to talk about?",
+      "response": "I understand how special that beer is for you. It can be frustrating when it's out of stock. Have you tried looking online to see if they might deliver?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1584,7 +1584,7 @@
     {
       "index": 88,
       "user": "They were belgian chocolate ones with salted caramel",
-      "response": "That sounds delicious! Belgian chocolate is so versatile—try dipping some fresh fruit for a sweet surprise. Maybe you could share your favorite ways to enjoy them next time?",
+      "response": "Oh, those sound amazing! A bit of sweetness and a touch of salty richness—quite the treat! How do you feel after enjoying them?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1601,7 +1601,7 @@
     {
       "index": 89,
       "user": "It wasn't a great time, but it just really irked me since I had no idea that she was not into me at that time. She must've been really good at faking it.",
-      "response": "That can be frustrating, especially when there's so much uncertainty... Perhaps you could have shared more about her intentions earlier? It might help prevent future misunderstandings like this.",
+      "response": "It's understandable that you felt hurt by the surprise of the breakup. It can be incredibly frustrating when someone seems fine on the surface but is actually struggling internally. Did she have any signs leading up to the breakup that you might have missed?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1618,7 +1618,7 @@
     {
       "index": 90,
       "user": "Yeah, it's kind of a shame my roommate isn't the cleanest. So, when I bother to clean the other areas of the apartment, it kind of goes to waste. But at least I can kind of keep up my own little domain and use it as a retreat from the rest of the place.",
-      "response": "It sounds like you're doing a great job maintaining some personal space while also acknowledging the challenges with shared living situations. It's important to find balance between individual needs and communal responsibilities.",
+      "response": "I understand how frustrating that can be. It's great that you've created your own little oasis where you can relax and recharge. Do you ever talk to your roommate about the cleaning habits? Sometimes open communication can help maintain balance in shared spaces.",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -1635,7 +1635,7 @@
     {
       "index": 91,
       "user": "Yeah I was able to get the food unlodged but wow it was super scary. Shes okay now thanks!",
-      "response": "That's good to hear! It must have been very frightening for both of you. Remember that such incidents can happen to anyone; it's part of life. Do let me know if you need any support moving forward.",
+      "response": "I'm glad your daughter is okay. Scary moments like that can really test our nerves. How are you feeling about it now?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1652,10 +1652,10 @@
     {
       "index": 92,
       "user": "It was the outlaw josey wales",
-      "response": "That sounds like an interesting story. Do you have any fond memories associated with \"Outlaw Josey Wales\"?",
+      "response": "Oh, \"The Outlaw Josey Wales\" can be a nostalgic watch, filled with memorable scenes and great performances. It often reminds people of simpler times or past adventures. Did it bring back any specific memories or emotions from your childhood?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1669,10 +1669,10 @@
     {
       "index": 93,
       "user": "Sorta.. Im just really nervous!",
-      "response": "Me too! But don’t worry, you’ll do great. Just remember to be yourself and enjoy the moment. If it’s helpful, we can chat about what you want to say or how you feel.",
+      "response": "It’s completely normal to feel nervous. How about we think of this as an opportunity for a new adventure? What do you like about the person you’re meeting?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1688,7 +1688,7 @@
     {
       "index": 94,
       "user": "I agree, I just felt so grateful to have food on my table.",
-      "response": "It's always nice to feel content with what we have, even if it seems small compared to others. Keep doing things that make you happy!",
+      "response": "It's wonderful to feel gratitude, especially for simple blessings like a meal. Does this kind of reflection help you appreciate your daily experiences more?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -1705,7 +1705,7 @@
     {
       "index": 95,
       "user": "My children were in the car so I decided to drive them home. I went back later but she was gone.",
-      "response": "It sounds like you felt compelled by your initial impulse to help someone in need despite having responsibilities that day. How does this memory make you feel?",
+      "response": "That must have been an uncomfortable decision, balancing your family's safety with wanting to help someone in need. How do you feel about that experience now?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1724,10 +1724,10 @@
     {
       "index": 96,
       "user": "I outperformed him.  I am so mad about it!",
-      "response": "That's tough to hear, especially when your performance was outstanding. How can I help you process these emotions?",
+      "response": "That must feel really frustrating! It’s okay to be upset, but have you considered why he might have felt threatened by your performance? Sometimes people react that way when they fear losing their position. How are you feeling now that the situation has come to this?",
       "expected_policy": "tense",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "sad",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1743,10 +1743,10 @@
     {
       "index": 97,
       "user": "Cool I didn't know that!",
-      "response": "Yes, it's a great service. Sometimes just knowing that someone else has done research on your preferences helps take away some of the pressure.",
+      "response": "Glad you found that helpful! Sometimes having some guidance can take the pressure off. Do you feel more relaxed knowing you have an option like that?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1762,7 +1762,7 @@
     {
       "index": 98,
       "user": "I know, I always get freaked out when I go to the beach!",
-      "response": "It can be quite nerve-wracking, especially with all those big fins swimming around. Maybe we could try going somewhere less crowded next time?",
+      "response": "It's totally understandable to feel that way. Sometimes nature can be a bit too thrilling for our comfort zones. Do you find any activities help calm your nerves?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1779,7 +1779,7 @@
     {
       "index": 99,
       "user": "I found out my girlfriend was cheating on me with one of my friends.  I cant bear to look at either of them right now",
-      "response": "That must be incredibly difficult for you. It's important to take things slow and give yourself time to process these feelings without judgment. Maybe consider talking about it with someone who can offer support and help navigate your emotions. Remember, healing takes time, so be patient with yourself.",
+      "response": "I'm really sorry you're going through this. It must feel incredibly painful. Would you like to talk more about how you're feeling?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1798,10 +1798,10 @@
     {
       "index": 100,
       "user": "4 days... I just don't like being home alone at night",
-      "response": "It's completely understandable to feel lonely when you're away from someone you care about. Maybe you could do something that makes the place more lively, like cleaning up, setting some music, or even making some meals to keep yourself busy. It might also help if you have things you can share with your roommates so they know how much you're missing them too. Don’t hesitate to reach out to friends or family who can visit or call during his absence.",
+      "response": "It's totally normal to feel that way. Do you have any plans or activities you're looking forward to while he's away? Or maybe there's someone you can talk to on the phone to help pass the time?",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "lonely",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1815,7 +1815,7 @@
     {
       "index": 101,
       "user": "I was- Monday was my first day. My goal was not to make a fool out myself.",
-      "response": "It sounds like you're approaching this with a sense of excitement mixed with a touch of apprehension. It’s great that your goal isn't just to succeed but also to learn from the experience. High expectations can be motivating! How is your preparation going so far?",
+      "response": "It sounds like you came into it with a great mindset! How did your first day go? Did you find anything particularly challenging or rewarding?",
       "expected_policy": "comforting",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -1834,10 +1834,10 @@
     {
       "index": 102,
       "user": "It is Jeep Wrangler X Series.",
-      "response": "Great choice! What do you like best about your new Jeep?",
+      "response": "That sounds thrilling! A Wrangler gives you the freedom to explore all sorts of terrains. Does it make you feel adventurous?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 51,
         "trust": 50,
@@ -1853,10 +1853,10 @@
     {
       "index": 103,
       "user": "Thanks. It was totally unexpected.",
-      "response": "That's wonderful to hear! Unexpected gifts can bring joy and surprise into our lives. If you haven't had the chance to contact the sender yet, it might be nice to take a moment to appreciate what they sent you unexpectedly. Do you want some ideas on how to approach this?",
+      "response": "It must be such an exciting surprise! Have you thought about who might have sent it? Sometimes surprises like these can make us think back on past connections or wonder what kind of person would do something so thoughtful for you.",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 52,
         "trust": 50,
@@ -1872,7 +1872,7 @@
     {
       "index": 104,
       "user": "This guy, who I guess thought he was more important than anyone else, flew up the emergency lane and blocked the ambulance.",
-      "response": "That's unfortunate! It can be frustrating when people disregard others' safety. What do you think about how that person behaved?",
+      "response": "That must have been really frustrating! It's easy to lose our cool in stressful situations like those. Did you feel safe enough to express your frustration, or were you stuck just observing?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1889,10 +1889,10 @@
     {
       "index": 105,
       "user": "Nothing, I am so mad that it happened.",
-      "response": "It's understandable to feel upset about something like that. Did anything else happen after you found out your lunch was gone?",
+      "response": "It's understandable to feel frustrated. Losing something we worked hard for can really get under our skin. Would you like to talk about why this lunch was important to you, or what might help you feel better now?",
       "expected_policy": "tense",
-      "predicted_policy": "comforting",
-      "response_emotion": "sad",
+      "predicted_policy": "tense",
+      "response_emotion": "angry",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -1908,7 +1908,7 @@
     {
       "index": 106,
       "user": "I want to but can't afford them. I wish I could be like him.",
-      "response": "It's understandable if you feel envious of your friend's success. It might help to remind yourself of the value in what they have achieved. Maybe consider setting small, achievable goals for yourself instead. Remember, true happiness comes from within and can’t be measured by material possessions.",
+      "response": "It's understandable to feel envious of what your friend has, especially if it affects how you play together. But remember, everyone has their own path and strengths. What makes you unique? Maybe there’s another way to level up your game without spending a lot of money. How about focusing on improving with practice or trying out different strategies during your games?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1927,7 +1927,7 @@
     {
       "index": 107,
       "user": "I just started learning last month and I love it as well.",
-      "response": "Learning new things is so exciting! What kind of stuff did you start?",
+      "response": "It's amazing how much you can enjoy something so new! What aspects of web design do you find the most interesting?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1947,7 +1947,7 @@
     {
       "index": 108,
       "user": "Yeah, I'm doing okay. It hit pretty hard because we were pretty close back then, but had drifted apart the last few years. I wish I hadd taken the time to do more with him.",
-      "response": "It sounds like this has been tough for you. Sometimes distance can make us appreciate people even more when they're gone. Do you think talking about it might help?",
+      "response": "I can understand feeling that way. Sometimes life gets busy, and it's easy to drift apart. It's never too late to reconnect and cherish those moments. Would you like to reach out to some of your other old friends for support right now?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1966,7 +1966,7 @@
     {
       "index": 109,
       "user": "Well, it made me want to sink into the floor. I don't like being the center of attention",
-      "response": "It's understandable that you feel uncomfortable with this situation. It can be challenging, especially when it comes to showing vulnerability. If you're not comfortable discussing this further, perhaps we could focus on something more positive to help shift your mood?",
+      "response": "That must have been really embarrassing! It's normal to feel that way when something like this happens. Did your friend react well? Sometimes just a little bit of humor can defuse such situations. How did you handle it after the spill?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -1983,10 +1983,10 @@
     {
       "index": 110,
       "user": "To the smaller one, Kauai. We were shocked!  I have always wanted to go but we just never have money for vacations.",
-      "response": "It's great you're planning this vacation together now, even if it's more expensive than usual. It sounds like you've been wanting to visit Kauai for a while. Perhaps consider finding some budget-friendly ways to make your trip possible, like staying with friends, cooking meals yourself, or exploring different activities within your means. Enjoy planning and let us know how it goes!",
+      "response": "That sounds like such an amazing surprise! It must feel both thrilling and overwhelming all at once. Are you looking forward to exploring Kauai with your family?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2002,7 +2002,7 @@
     {
       "index": 111,
       "user": "Or boost his ego? Either way, he didn't succeed.",
-      "response": "It's tough when people push your boundaries like that. Sometimes it helps to have someone outside your usual circle to help you navigate these situations. Maybe consider seeking advice from someone who understands what you're going through better.",
+      "response": "It can be really hurtful when someone doesn't respect your boundaries like that. How do you feel about it now? Is there anything you wish you could have said or done differently back then?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2019,7 +2019,7 @@
     {
       "index": 112,
       "user": "Yeah, I'm just going to try to be as helpful as I can. But I also can only stand so much. Newborns are hard. I haven't had my own yet. What about you? Do you have any kids?",
-      "response": "That sounds like quite an adjustment! Maybe next time you could share some tips on how to handle diaper changes or new parenting moments together? I'd love to learn more from your experience too!",
+      "response": "It sounds like you're doing your best to support your sister. Newborns definitely test everyone's patience! As for me, I don't have children myself, but I can understand how challenging it can be. Would you like to share more about your experiences or anything else on your mind?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2039,10 +2039,10 @@
     {
       "index": 113,
       "user": "I was so shocked! She usually doesn't do things like that. I was so disgusted when I had to clean it up.",
-      "response": "It sounds like your furry friend has been causing some trouble with her habits again. Perhaps you could try speaking calmly to her about not doing those kinds of things anymore? It might help teach her better behavior.\nHave you tried anything to encourage her to use the right bathroom for her?\nWould love to know what works best for your pet.",
+      "response": "I can imagine how frustrating and gross that must have been. Sometimes pets can be unpredictable, especially if they're feeling stressed or unwell. Have you noticed any other changes in her behavior lately?",
       "expected_policy": "tense",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "anxious",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2056,10 +2056,10 @@
     {
       "index": 114,
       "user": "I have a very bad memory, so you're right. The pictures really help me remember times I really enjoyed with my grandfather when I was young.",
-      "response": "It sounds like those memories mean a lot to you. Sometimes seeing things can bring back strong emotions. Maybe it might be helpful to keep these photos somewhere safe or even recreate them in your mind if they've been a long time since those days.",
+      "response": "That's wonderful how the pictures can bring back those cherished memories. Sometimes it helps to make a small album or even create a digital slideshow to relive those moments more often. Would you like to talk about any specific memories while we do that?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2076,10 +2076,10 @@
     {
       "index": 115,
       "user": "My favorite is 100 dalmatians. The movies from the 2000s were so nostalgic.",
-      "response": "Me too! Those early Disney movies had such charm. What do you think about the newer ones?",
+      "response": "That's awesome! Those movies do have a special place in many hearts. Do you remember any particular scenes or songs that always bring back those good old days?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2095,7 +2095,7 @@
     {
       "index": 116,
       "user": "Family in a way. That is great that you have grown as a person! It is rare. They complain when they have things good and still aren't happy when it's bad?- I don't get it- I don't get people who want to stay in misery",
-      "response": "It's understandable that you feel that way sometimes. Sometimes it takes time for others to realize their potential and the happiness within them. Maybe start by understanding yourself better so that you can empathize more with those around you. Remember, everyone has their own path and pace.",
+      "response": "It can be really frustrating when we see others struggling despite having opportunities. Sometimes, it might help to understand what's going on for them—maybe they're dealing with deep-seated issues or just need someone to listen. How do you usually feel after talking about these thoughts?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2112,7 +2112,7 @@
     {
       "index": 117,
       "user": "Yeah, my friends have been there for me. Not really easy though",
-      "response": "It can be very hard when someone we love passes away, but it's important to remember that time helps us heal. It's okay not to feel ready yet, but try to take things slow and give yourself some space if needed. Remember, your support system is here for you no matter what.",
+      "response": "It sounds incredibly tough. Having your friends around can make a big difference. Do you feel like talking about what they've done for you or how it's helping?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2129,10 +2129,10 @@
     {
       "index": 118,
       "user": "He arrives this weekend. I have a fun planned weekend.",
-      "response": "Sounds like you're looking forward to it! Enjoy the weekend with your friends. Let me know how it goes!",
+      "response": "That sounds wonderful! Looking forward to spending quality time with your friend. Do you have any special plans in mind?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2148,7 +2148,7 @@
     {
       "index": 119,
       "user": "She's going to pay bills until she gets a new job.",
-      "response": "That's practical. It's good that she has immediate financial support. Do you think she'll feel more secure now having money in hand?",
+      "response": "That sounds like a smart plan. Having some financial cushion can really ease stress during tough times. Is there anything you'd suggest she should consider while managing these funds?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2165,7 +2165,7 @@
     {
       "index": 120,
       "user": "I am not happy with how the Eagles played yesterday, they lost to the browns of all teams- by 5 points, 5-0, what a lame game",
-      "response": "That sounds like it was an intense game for you! It's understandable to feel upset about losing, but remember that each game is a learning experience. Perhaps this loss can help you grow as a player and person. How do you usually handle such situations?",
+      "response": "I can totally understand feeling disappointed about that loss! It's tough when you're rooting for them. Want to talk more about it? Maybe we could find some silver linings together?",
       "expected_policy": "comforting",
       "predicted_policy": "comforting",
       "response_emotion": "sad",
@@ -2184,7 +2184,7 @@
     {
       "index": 121,
       "user": "I want whoever made the mess to clean it up.",
-      "response": "That's fair! Let’s work together to find a solution that works for both of us. Perhaps we could remind them next time?",
+      "response": "It can be frustrating when things like that happen. It might help to leave a note politely asking who used the microwave to clean it up. Have you considered doing that?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2203,7 +2203,7 @@
     {
       "index": 122,
       "user": "Yes I did until  she moved to the west coast",
-      "response": "That's quite an adventure! Do you miss spending time with her there? Maybe we can chat about some of those shared experiences now.",
+      "response": "It's nice to reconnect and relive those shared experiences. Have you kept in touch since then?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2220,7 +2220,7 @@
     {
       "index": 123,
       "user": "Indeed. It would be interesting to watch for time to come. Criminal investigation coming to conclusion and what to do about Strzok and his thug evildoing.",
-      "response": "It sounds like you're looking forward to learning more details about the investigation. The tension surrounding it adds to its intrigue. Stay tuned!",
+      "response": "It sounds like an intense situation with many implications. How do you feel about the prospect of seeing it unfold?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2237,10 +2237,10 @@
     {
       "index": 124,
       "user": "I like old disney movies most, especially osmosis jones.",
-      "response": "Osmosis Jones was a great movie! Do you have any other favorites by Disney?",
+      "response": "Osmosis Jones is such an unexpected gem! It's fun to revisit those classic Disney films with their unique twists. What do you love about Osmosis Jones?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2256,7 +2256,7 @@
     {
       "index": 125,
       "user": "My wife is always laughing at me about that. she tells me i act like a kid",
-      "response": "It's understandable if your wife finds it amusing; sometimes humor can be a way of coping with discomfort. However, it might help you feel more comfortable discussing your concerns if we talked about this together. What do you think?",
+      "response": "It's understandable to feel self-conscious about your fears, especially when someone close to you makes light of them. How do you usually cope with those feelings?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2275,7 +2275,7 @@
     {
       "index": 126,
       "user": "I am sure I will do it.",
-      "response": "That's great! Puzzle-solving can be a fun way to channel your emotions and add a creative touch to the process. Remember to take breaks if needed and enjoy the journey of putting it all together!",
+      "response": "That's great! It sounds like you're confident and ready for the challenge. Do you need any tips on how to stay focused and motivated as you work on it?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -2295,7 +2295,7 @@
     {
       "index": 127,
       "user": "I had such a sugar rush and then crashed hard after hah! I felt like I had to brush my teeth for an hour that night.",
-      "response": "Haha, it sounds like you really enjoyed the challenge! But don't worry about brushing so much – just enjoy your victory today! If you need someone to share the experience with, feel free to chat.",
+      "response": "Haha, too much candy can be a real downer afterward! Did the victory feel sweet enough to make up for the aftermath?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2314,7 +2314,7 @@
     {
       "index": 128,
       "user": "That is true, I was just depressed",
-      "response": "It's okay to feel that way sometimes, but remember you have so much potential. What could you do today to brighten your day?",
+      "response": "I'm sorry to hear that you were feeling so down. Sometimes depression can make everything feel overwhelming. Have you found it helpful to talk about your feelings with your girlfriend or someone else?",
       "expected_policy": "comforting",
       "predicted_policy": "reflective",
       "response_emotion": "neutral",
@@ -2331,7 +2331,7 @@
     {
       "index": 129,
       "user": "Yeah, I just feel so bad about it. I was trying to stay disciplined and good about my diet.",
-      "response": "It's okay to make mistakes sometimes. Remember that we're all human and making room for imperfections is important. How do you usually cope with these situations?",
+      "response": "It's completely normal to feel that way when we slip up, especially after being consistent with our goals. What can be helpful is acknowledging the feelings and then gently reminding yourself that one indulgence doesn't define you or undo all your efforts. Would you like to talk more about why this particular slip felt harder than others?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2350,7 +2350,7 @@
     {
       "index": 130,
       "user": "No it was awhile back, but its a good memory",
-      "response": "That sounds like an important milestone in your life! Do you have any specific thoughts or feelings about the experience now?",
+      "response": "It sounds like a really positive memory. Working hard and seeing your efforts pay off can be incredibly rewarding. Do you still think about that achievement often?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2369,7 +2369,7 @@
     {
       "index": 131,
       "user": "No luckily my family was safe. Two girls down the street got killed.",
-      "response": "That's incredibly tragic. It must have been a very scary experience for your family. Was there anything specific that stuck with you from that day?\n\nI'm here to listen and offer support if you need it.",
+      "response": "That must have been incredibly frightening to witness. It's so important that your family was safe. How do you feel thinking about that experience now?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2386,10 +2386,10 @@
     {
       "index": 132,
       "user": "Yes I did.  Still keep in touch every week even though she's in the Midwest and I'm in the South.  Might pop in for a visit one of these days",
-      "response": "That's lovely how you're staying connected with your family despite being far apart! What kind of music do you usually listen to when you feel nostalgic?",
+      "response": "That's wonderful! It's so special to have those connections across distances. When you do plan to visit, I bet it'll be an amazing experience filled with lots of stories and laughter.",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2405,10 +2405,10 @@
     {
       "index": 133,
       "user": "They are. It makes me misty-eyed to think that there was ever a time when I didn't have to pay bills.",
-      "response": "It's beautiful how much you care about your financial situation. Remember, every challenge is an opportunity for growth. What can we do to help with bills?",
+      "response": "It's completely normal to feel both excited and overwhelmed by the changes life brings. Reflecting on those simpler times can make the present seem more significant. How do you feel about these mixed emotions?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2424,7 +2424,7 @@
     {
       "index": 134,
       "user": "I was trying to explain to them why the Great Recession was caused by the recycling of petrodollars and an unrestrained financial market.",
-      "response": "It sounds like there might be some gaps in your explanation for your friend that led to their difficulty understanding. Try breaking down complex concepts into simpler terms, using analogies if necessary. Sometimes people connect better with stories than dry facts. Remember, everyone has different learning styles so adapt your approach accordingly.",
+      "response": "That's quite a complex topic! It's not surprising if your friend had trouble grasping all the details right away. Sometimes, explanations require breaking down information into smaller, more digestible parts, or using analogies that relate to their experiences. How do you feel about not being understood on this topic?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2441,7 +2441,7 @@
     {
       "index": 135,
       "user": "Oh, I swerved far away from it. That thing was nasty!",
-      "response": "That's good that you could handle the situation calmly. Sometimes seeing such things can be tough but we have our limits too. How is your day going since then?",
+      "response": "Glad you missed it! Seeing something like that can really put a damper on your day. How are you feeling about it now?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2458,7 +2458,7 @@
     {
       "index": 136,
       "user": "Yeah, I will do better next time for sure",
-      "response": "That's great! Remember to take it one day at a time, even if tomorrow is harder than today. Stay positive!",
+      "response": "That's a great attitude! It's all about learning from experiences and improving. How can I help you prepare for your next test?",
       "expected_policy": "tense",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -2475,10 +2475,10 @@
     {
       "index": 137,
       "user": "It's the real deal! Tied to another person. It is my first time, and believe me I am scared out of my mind...but you only have one life to try new things assuming you don't go splat :D",
-      "response": "Oh man, that does sound terrifying but also exciting all at once! Do you feel more nervous about being so high up or trusting someone else? Let's see how you're holding up with each other and then we can get to it. I’m rooting for you buddy!",
+      "response": "That sounds incredibly exciting and a bit daunting too! How are you feeling about it now? Are you looking forward to the experience despite the nerves?",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "anxious",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2495,7 +2495,7 @@
     {
       "index": 138,
       "user": "No, he did pass away about 9 months after the diagnosis.  I tried to help care for him, but we had to call hospice in eventually.  There are some angels that work for hospice.",
-      "response": "That's tough, Ari. It must have been hard on you both. Hospice can be very comforting during those last days. They're there to provide support and comfort to patients and their families. It's good that they were able to offer that to your dad-in-law as much as possible. How are you feeling now?",
+      "response": "I'm so sorry for your loss. It must have been incredibly difficult during those times. Did you find any moments of comfort or peace through caring for him?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2512,7 +2512,7 @@
     {
       "index": 139,
       "user": "Thank you. I agree. She really is great most of the time.",
-      "response": "It's wonderful how much joy and surprise can come from small gestures like this! Your sister sounds like an amazing friend. How else might you feel about her recent action?",
+      "response": "It's wonderful to feel appreciated by someone who means so much to you. Does this surprise often make your day brighter?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -2529,7 +2529,7 @@
     {
       "index": 140,
       "user": "No, I have to stay off of it completely. I can use crutches but in the heat, that will not be worth it.",
-      "response": "That sounds like quite an inconvenience. How about we focus on other activities or goals instead? Maybe something less strenuous that still brings you joy and relaxation. What do you think?",
+      "response": "I understand how frustrating that must feel. It's tough when all your efforts seem to hit a roadblock like this. Do you want to talk about what might bring you comfort right now?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2549,7 +2549,7 @@
     {
       "index": 141,
       "user": "Indeed. It is a refreshing feelings overall that gives you after having cleaned everything",
-      "response": "It does sound good! Sometimes cleaning can be like an adventure of sorts. Maybe we could plan another project together soon?",
+      "response": "Absolutely! There's something incredibly satisfying about creating a clean and organized space. How does your kitchen look now?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2566,10 +2566,10 @@
     {
       "index": 142,
       "user": "Yes, I have been working on it every day.",
-      "response": "It sounds like you've really put in the work.  Wedding planning can be quite an undertaking, so it's wonderful that you're taking care of all the details.  It will definitely feel great when the big day comes.",
+      "response": "That's amazing dedication! It must feel really rewarding to be this prepared. How do you feel about all the planning now that your wedding is so close?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2586,7 +2586,7 @@
     {
       "index": 143,
       "user": "How did you guess? I looked down and saw I nailed a fresh steaming pile of dog wonder. Well let's just say my mood quickly turned very foul!",
-      "response": "Oh dear, that sounds like quite an experience. It must have been uncomfortable having your shoes all messy. Is there anything I can offer to help make it better for you today?",
+      "response": "Oh no, that sounds awful! It must have been quite the mood-shifter. Do you want to talk about it for a bit? Sometimes venting can help lighten the load.",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2603,7 +2603,7 @@
     {
       "index": 144,
       "user": "I'm kind of would like to do it again as well, knowing what I know now.",
-      "response": "That's brave of you to consider revisiting that time. It might bring new perspectives and insights. How about we focus on enjoying our present moment instead? Enjoying the journey is just as important as arriving somewhere.",
+      "response": "That's an interesting thought! Knowing more about yourself now might make those experiences even richer. What do you think you'd do differently?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2623,7 +2623,7 @@
     {
       "index": 145,
       "user": "Well, I'd have to dip into savings to finance a new car...but that's rough right now when I'm moving apartments",
-      "response": "It sounds like your financial situation is tight right now. Maybe consider taking out a small loan to fix the car instead of waiting until after the move. It could save you from having to sell an apartment unnecessarily. What do you think?",
+      "response": "That does sound tough. It must feel like one challenge after another. Have you talked to anyone about your options or looked into any possible financial assistance programs?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2642,7 +2642,7 @@
     {
       "index": 146,
       "user": "I was 20 at the time when i moved out. But all that freedom was just a great feeling.",
-      "response": "That's quite an age difference! It sounds like you had your own adventures then. What did you do after moving out?",
+      "response": "At 20, that sense of independence is truly liberating! What did you do first to celebrate your new space?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2659,7 +2659,7 @@
     {
       "index": 147,
       "user": "We develop enterprise software solutions for business per client request, and i was able to create a very efficient algorithm",
-      "response": "That sounds amazing! It must have been great to see your efforts recognized like that. How did it make you feel?",
+      "response": "That sounds really impressive! Creating an efficient algorithm must have been quite challenging and rewarding. It’s great to get recognition for such hard work. How did the rest of your day go after that?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -2676,7 +2676,7 @@
     {
       "index": 148,
       "user": "why don't you try harder next time?",
-      "response": "I'm trying my best to understand your situation without judgment. Sometimes people might say things they shouldn’t because of their own insecurities or misunderstandings. It's important to remember that everyone has flaws. How can I help make this interaction better for both you and your family?",
+      "response": "It's okay to feel that way. Sometimes, despite our best efforts, others' actions can still make us uncomfortable. How did this make you feel specifically? Was there anything you wished could have happened differently?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2693,7 +2693,7 @@
     {
       "index": 149,
       "user": "yeah, especially if you believe you are 100% innocent of the charges.  However a $600 fine and to be released sounds better than 2 months sitting in jail awaiting a court date.",
-      "response": "It must have been an extremely stressful situation for you. Do you think there was any way you could've handled things differently?",
+      "response": "It must feel really tough accepting a plea deal when you think you're innocent. The financial burden can add another layer of stress. Did this situation leave you feeling relieved about getting out soon?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2710,10 +2710,10 @@
     {
       "index": 150,
       "user": "It was one of the first times I drank and I felt awful and thought I was basically gonna die.",
-      "response": "That sounds like a tough experience. It's understandable to feel nervous around alcohol for many people, especially when you're new to it. How did you handle your fear later on?",
+      "response": "That sounds really tough. Drinking can be overwhelming, especially for the first time. How did you feel after it all passed? Did anything positive come out of that experience?",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "anxious",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2727,10 +2727,10 @@
     {
       "index": 151,
       "user": "I feel like my ego was hurt more than my nose, but yes, it hurt like hell!",
-      "response": "It sounds like you're feeling frustrated about how this incident affected your sense of self-worth. It's important to remember that our bodies heal much faster than our emotions can sometimes catch up with us. Perhaps take some time to relax and allow yourself to process these feelings slowly.",
+      "response": "It sounds like quite an unpleasant surprise. Egos can definitely take a hit when unexpected things happen. Are you feeling okay now, or do you need help with anything?",
       "expected_policy": "comforting",
-      "predicted_policy": "tense",
-      "response_emotion": "angry",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2744,7 +2744,7 @@
     {
       "index": 152,
       "user": "I don't know, It just seems like she always gets everything. ugh ! Sometimes I wish I could be as lucky as her.",
-      "response": "It can definitely feel discouraging when someone else seems to have all the advantages. Remember though, life is not fair and everyone has their own set of challenges. Maybe focusing on your own strengths and goals might help boost your confidence. How does it make you feel today?",
+      "response": "It must feel frustrating when things seem to come easy for others. Do you think there's anything specific you've been working on lately that might have gone unnoticed?",
       "expected_policy": "tense",
       "predicted_policy": "reflective",
       "response_emotion": "neutral",
@@ -2763,10 +2763,10 @@
     {
       "index": 153,
       "user": "Thank you. It's a produt manager job for Nestle. It pays really well and I'm very excitied about the possibilities!",
-      "response": "That sounds amazing! Excited for the opportunity isn't it? What was your last job like?",
+      "response": "That sounds like a fantastic opportunity! The pay and potential are definitely exciting. How are you feeling about taking on such an important role?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 53,
         "trust": 50,
@@ -2783,7 +2783,7 @@
     {
       "index": 154,
       "user": "I think its because I am sentimentally attached to it! It belonged to my late grandfather.",
-      "response": "That's understandable. Losing something you're so close to can be tough emotionally. How do you feel about the car right now?",
+      "response": "I can understand how special that car must be to you. Losing something tied to someone dear can make letting go very hard. Would you like to talk more about why you're feeling this way?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2803,7 +2803,7 @@
     {
       "index": 155,
       "user": "I never will.  I am so mad about it!",
-      "response": "It's okay to feel that way. Sometimes our anger is justified. Maybe you could think of ways to move forward without hurting yourself more emotionally.",
+      "response": "I totally get your frustration. It feels really annoying when that happens. Do you want to tell me more about what led up to this?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2822,10 +2822,10 @@
     {
       "index": 156,
       "user": "Not yet, I hope we do",
-      "response": "It's okay if you don't want to reschedule right now. It's important to take care of yourself too. Maybe we could plan something else that fits better for both of us?",
+      "response": "It's good that you're hoping for a rematch. Sometimes unexpected cancellations can make us feel disappointed, but planning again shows there’s still interest and fun between you two. Want to talk more about why you were looking forward to spending time with him?",
       "expected_policy": "tense",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "sad",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2839,7 +2839,7 @@
     {
       "index": 157,
       "user": "It's just a sad life that I live.",
-      "response": "Losing opportunities can be tough, but sometimes we have to take what comes our way. Maybe there are other ways you enjoy entertainment besides going to the movies. Let’s think of some hobbies together.",
+      "response": "I can understand how you feel that way sometimes. Life can be challenging and full of ups and downs. Do you want to talk more about why you feel that way?",
       "expected_policy": "comforting",
       "predicted_policy": "reflective",
       "response_emotion": "neutral",
@@ -2858,10 +2858,10 @@
     {
       "index": 158,
       "user": "Yeah I wasn't there for the funeral cuz she was all the way in the Philippines...but looking through photos brings back good memories too",
-      "response": "It's understandable that seeing these photos might bring up mixed emotions. Memories can be both bittersweet and comforting. It's important to acknowledge and honor your loved ones even from afar. Perhaps sharing some of those moments with someone who could listen without judgment could be helpful. What do you think about doing that?",
+      "response": "It's completely understandable to feel both sadness and guilt, especially about not being there for her. The photos can indeed bring back wonderful memories and help keep her close to your heart. Do you find it comforting to share these memories with someone?",
       "expected_policy": "comforting",
-      "predicted_policy": "reflective",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 51,
@@ -2875,10 +2875,10 @@
     {
       "index": 159,
       "user": "she said no.. I couldnt believe it, I was so upset",
-      "response": "It sounds like you're feeling very disappointed. It's okay to feel that way. Sometimes, things don't work out the way we hope they will. Remember, love is not always about immediate happiness but also growth and understanding. Maybe take some time for yourself to process this. How do you feel about taking a step back from the relationship for a bit while you figure things out?",
+      "response": "I'm really sorry you're going through this. It must feel incredibly disappointing and painful. Can you tell me more about how you both felt during the conversation?",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "sad",
+      "predicted_policy": "reflective",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 51,
@@ -2892,7 +2892,7 @@
     {
       "index": 160,
       "user": "i just used it to trim some trees in my backyard that was long overdue",
-      "response": "Oh wow, trimming trees sounds like an adventure! Did you manage to make progress on them?",
+      "response": "Good choice! Taking care of outdoor chores can make a big difference. It feels good to have things done and looking tidy, doesn't it?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2909,7 +2909,7 @@
     {
       "index": 161,
       "user": "Oh yes! he has not stopped talking about it all summer!",
-      "response": "That sounds wonderful! He must be very excited to make new friends and learn something new. Enjoy this time with him leading up to the big day.",
+      "response": "That's wonderful to hear! It sounds like he's really excited. Are you feeling nervous about the transition?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -2926,7 +2926,7 @@
     {
       "index": 162,
       "user": "I know. it really ruins any faith I have in people.  Plus, it was so much money that I had saved for quite a while and now I'm back to square one.  I could explode thinking about it.",
-      "response": "It sounds like you're feeling very upset right now. Sometimes our reactions can feel overwhelming. How do you think we might be able to help you manage these emotions better?",
+      "response": "I can only imagine how frustrating and disappointing that must feel. Losing something you worked hard for like that... it's completely understandable to feel angry and upset. Do you want to talk more about what happened? Sometimes sharing can help ease some of those feelings.",
       "expected_policy": "tense",
       "predicted_policy": "comforting",
       "response_emotion": "sad",
@@ -2946,7 +2946,7 @@
     {
       "index": 163,
       "user": "Well i took in his two dogs for the moment. He got evicted due to his roommate not his expenses mind you.",
-      "response": "Taking care of the dogs is admirable, especially when it's someone else's problem. Maybe he could talk to the landlord about finding a solution that works for everyone?",
+      "response": "That's really kind of you! Taking in the dogs must be quite an adjustment. How are you handling it? Are there any specific needs they have that you're dealing with?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2963,7 +2963,7 @@
     {
       "index": 164,
       "user": "I know. I miss it.",
-      "response": "It's okay to miss the past, but remember, life changes as we grow and evolve. Try not to dwell too much on what could have been; focus on today and tomorrow.",
+      "response": "It's understandable to feel that way. Holding onto the past can be comforting, even if things were simpler then. How do you think we can find new ways to enjoy today without comparing it too much?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -2980,10 +2980,10 @@
     {
       "index": 165,
       "user": "Oh wow, was everyone okay",
-      "response": "Yes, they were very safe. Lightning strikes can cause damage but not always harm people directly if they stay indoors. That must have been quite an experience for you! How about sharing more about your recent interactions?",
+      "response": "Yes, thankfully no one was hurt. But those thunderclaps and flashes can really make you jump! Do you think a soft, calming music might help the next time there’s a storm?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "lonely",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -2999,10 +2999,10 @@
     {
       "index": 166,
       "user": "I keep up with my finances on a daily basis, and weekends and holidays always make that more difficult.",
-      "response": "Understood. The convenience of a 24/7 reserve could certainly enhance your financial management. It's important to weigh this against potential downsides like increased transaction fees or access issues during certain times. Perhaps exploring options like automatic transfers might balance these concerns. How do you feel about trying something new?",
+      "response": "I understand how challenging it can be when your financial tasks feel overwhelming outside of regular business hours. It's great that you're keeping on top of things so diligently! Is there anything specific you find particularly stressful about managing your finances during those times?",
       "expected_policy": "tense",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3018,7 +3018,7 @@
     {
       "index": 167,
       "user": "at least you guys have votto!",
-      "response": "Absolutely, having votes is a great comfort and makes every game feel like it matters more. Let's keep our spirits up!",
+      "response": "Votto is a solid player indeed! He brings a lot of experience and reliability. It's always great to have a veteran like that on your team. How do you feel about his performance this season?",
       "expected_policy": "comforting",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -3035,7 +3035,7 @@
     {
       "index": 168,
       "user": "Yes I go to it every year but its always different.",
-      "response": "That sounds like an interesting tradition you have! Maybe try to make the experience more memorable next time by focusing on something specific rather than just going with the flow each year. What do you think about that idea?",
+      "response": "That sounds exciting! Each visit must bring new thrills and scares. Do you have any favorite parts of the haunt that you look forward to each year?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3052,10 +3052,10 @@
     {
       "index": 169,
       "user": "There's a necklace she has been eyeing for awhile, and I want to show her how much I really appreciate and love her with it.",
-      "response": "That sounds wonderful! Let’s make sure we get the perfect match. Do you have any specific style or materials in mind?",
+      "response": "That sounds like a thoughtful and meaningful gesture. It must mean a lot to your mom that you noticed something she likes so much! How do you feel about surprising her with the necklace?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 52,
         "trust": 50,
@@ -3072,10 +3072,10 @@
     {
       "index": 170,
       "user": "Yes, I think so",
-      "response": "That's great to hear! How about your plans for today? Do you need any support navigating through anything specific?",
+      "response": "It's good to have confidence in your government during challenging times. Do you find it helps to discuss these thoughts with someone?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3091,10 +3091,10 @@
     {
       "index": 171,
       "user": "It has been, I feel free!",
-      "response": "Absolutely, feeling free is great! How about we continue building on that positive momentum? Maybe discuss what new goals you might set for yourself next?",
+      "response": "Feeling free is such an incredible sensation. It must bring a lot of relief and new possibilities. Have you noticed any changes in how you're feeling overall?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3108,7 +3108,7 @@
     {
       "index": 172,
       "user": "You should find some time then",
-      "response": "Absolutely! What kind of books did you read? Let's explore more together.",
+      "response": "Absolutely, taking some time for yourself can be rejuvenating. What kind of books do you usually enjoy?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3125,10 +3125,10 @@
     {
       "index": 173,
       "user": "I sure was, i did not expect that at all",
-      "response": "That's wonderful to hear! A car can be such an exciting present, especially during a significant milestone like graduation. How does it feel driving the car now?",
+      "response": "It's always nice to be surprised with something so meaningful. Did you get to take it out for a spin right away?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3142,10 +3142,10 @@
     {
       "index": 174,
       "user": "Yes, I am a faithful person. I also believe in God, and I'm a Christian. So, I do believe that things will get better for me soon.",
-      "response": "It's comforting to hear that faith plays such an important role in your life. Remember, no matter what happens, there is always something good on the horizon if we just look for it with open eyes. How can I help you find those good things today?",
+      "response": "That's wonderful! Having faith can provide a lot of comfort and strength during tough times. How does your faith help you stay positive and hopeful?",
       "expected_policy": "playful",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3162,7 +3162,7 @@
     {
       "index": 175,
       "user": "yea but its still worrisome",
-      "response": "It's understandable to feel anxious about exams, especially if they're important. Remember, everyone feels nervous sometimes! Do you have any specific questions or strategies that could help prepare better?",
+      "response": "It's completely normal to feel worried about tests. Remember, preparation is key, but sometimes even with all the studying, things can get tricky. How about we break down your studying into smaller parts and focus on one section at a time? This might make it seem less overwhelming.",
       "expected_policy": "comforting",
       "predicted_policy": "comforting",
       "response_emotion": "anxious",
@@ -3181,7 +3181,7 @@
     {
       "index": 176,
       "user": "Yeah and she did so much for me when I was younger tooo.",
-      "response": "That's wonderful! It's always good to acknowledge all the support and love you receive from your family. How do you feel about discussing how this supports you?",
+      "response": "That's wonderful! It must have been really supportive to have someone like that by your side during those formative years. How do you feel thinking about all she did for you?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -3200,10 +3200,10 @@
     {
       "index": 177,
       "user": "They always do and then we start all over again. It's sad.",
-      "response": "It can be really frustrating sometimes, but you're doing the right thing by not going through with your court appearance. Let's chat more about what else is on your mind if you feel like it.",
+      "response": "I can only imagine how frustrating and upsetting this must be for you. Does talking about it help ease the frustration a little?",
       "expected_policy": "tense",
-      "predicted_policy": "reflective",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "sad",
       "state": {
         "affection": 50,
         "trust": 51,
@@ -3217,7 +3217,7 @@
     {
       "index": 178,
       "user": "They said they knew the Kardashians and have a helicopter. I guess I need to be more skeptical.",
-      "response": "That's understandable. Sometimes it can be hard not to believe something if we've trusted others before. It might help to research these kinds of claims yourself before accepting them as true. What kind of information sources do you typically trust when evaluating claims like this?",
+      "response": "It can be tough when people try to manipulate our trust. Maybe start by asking for specific details next time, like names of family members or specifics about their possessions. That way, it's easier to verify if something seems off.",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3237,10 +3237,10 @@
     {
       "index": 179,
       "user": "We are going to stay in Portland and explore it for a couple days, and we're probably going to do a lot of hiking so we can see all the beautiful scenery while we're there.",
-      "response": "That sounds like an amazing adventure! Enjoy exploring the beauty of Maine with your loved ones.",
+      "response": "That sounds like a wonderful adventure! Hiking through the scenic areas of Maine must be amazing. Are you looking forward to trying any local foods or visiting specific places in Portland as well?",
       "expected_policy": "playful",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3254,7 +3254,7 @@
     {
       "index": 180,
       "user": "Yea, she's coming back. I'm not gonna do anything with it, but someone else could easily just walk off with it.",
-      "response": "It sounds like you're feeling vulnerable about the situation. It's understandable to feel this way when your belongings are entrusted to another person. What would you like to do next?",
+      "response": "It must feel a bit nerve-wracking to have something valuable entrusted to you like that. How are you handling the responsibility?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3273,7 +3273,7 @@
     {
       "index": 181,
       "user": "I wasn't expecting it but was glad to see it. I have quite the sweet tooth for chocolate cake.",
-      "response": "Chocolate cake sounds delicious! Do you have any particular recipe that you enjoy making or enjoying?",
+      "response": "Chocolate cake sounds delicious! It's nice when something sweet like that comes as a pleasant surprise. Do you feel satisfied after enjoying your treat?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3292,7 +3292,7 @@
     {
       "index": 182,
       "user": "Yup about 15 years! I also live in a totally different state than the school we went to!",
-      "response": "That's quite a journey you've had since then. How have your lives changed so much?",
+      "response": "That's quite a surprise! How did you feel when you saw them again after all those years?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3309,7 +3309,7 @@
     {
       "index": 183,
       "user": "That is true, but I still catch myself wishing I was better",
-      "response": "It’s okay to wish for things that are not yours to wish upon. Maybe focus on what you can control rather than what you cannot. What does he like to do besides work? How about spending time with friends outside the office? Sometimes changing our focus away from jealousy towards appreciation can make it easier to move past it.",
+      "response": "It's completely normal to wish for things outside our current reality. How does that feeling make you want to change or grow?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3328,7 +3328,7 @@
     {
       "index": 184,
       "user": "I am going to look up some recipes then. I never use my slow cooker.",
-      "response": "Great idea! Slow cookers are amazing; they let you make big batches without having to be around all the time. They're perfect for making casseroles, soups, stews, etc. Happy cooking!",
+      "response": "Great idea! The slow cooker is amazing for lazy nights. Maybe start with something simple like chili or soup. It can really make your evenings cozier! What sounds good to you?",
       "expected_policy": "comforting",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -3348,7 +3348,7 @@
     {
       "index": 185,
       "user": "Not really, but I want to have it done before something bad like that happens.",
-      "response": "That's good to hear! It's important to prioritize your health. Remember, sometimes we have to face our fears to make sure they don’t become bigger ones later on. Take deep breaths, and remember, you're doing this for yourself. Have a safe dental visit!",
+      "response": "That makes sense. It's always better to address issues early on. Do you think talking to your dentist about any fears might help make you more comfortable?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3368,7 +3368,7 @@
     {
       "index": 186,
       "user": "Yes, I am so envious of him.",
-      "response": "It's understandable to feel envy sometimes, especially when comparing your current situation with someone else's success. It can be helpful to remember that everyone has their own journey and achievements. What do you think about trying something similar for yourself, like saving up for a new hobby or experience?",
+      "response": "It's understandable to feel envious sometimes. What do you think you might like about having a car like that?",
       "expected_policy": "tense",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3387,10 +3387,10 @@
     {
       "index": 187,
       "user": "He was able to juggle 5 bean bags for about a minute and a half.  I had no idea he was that coordinated.",
-      "response": "That's amazing! It takes a lot of practice and coordination to do something as precise as that. Maybe we can both work on our own coordination skills together sometime!",
+      "response": "That's impressive! It must feel great to see your friend's hidden talents come alive. Do you think you'd like to try juggling yourself someday?",
       "expected_policy": "playful",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3404,10 +3404,10 @@
     {
       "index": 188,
       "user": "It is frustrating. They made me waste three months for nothing.",
-      "response": "That must be incredibly disappointing. I'm sorry you're feeling this way. It's understandable how it would affect your situation.",
+      "response": "That must feel really disheartening. It's understandable to feel upset about all the time wasted. Have you talked to them about getting this sorted out more quickly?",
       "expected_policy": "tense",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "sad",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3421,10 +3421,10 @@
     {
       "index": 189,
       "user": "I think so, but I still feel physically sick because of the devastation. I feel like I have no idea what I am going to do now",
-      "response": "That sounds really tough. It's normal to feel overwhelmed when things don't work out as planned, especially with something like this. How about reaching out to someone who can help you navigate your next steps? Maybe a counselor or trusted friend could offer some guidance. What's your thought process on how you want to move forward?",
+      "response": "It's completely understandable to feel devastated. Losing your place at your dream school can really throw a wrench into plans. It's okay to take some time to process this. Have you thought about reaching out to them to find out more about why the decision was made? Or maybe talking to someone who has been through something similar could help.",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "tense",
+      "response_emotion": "angry",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3440,7 +3440,7 @@
     {
       "index": 190,
       "user": "it does. i really dont have a favorite, i never paid attention to them too much as a kid. but i do rember bonanza",
-      "response": "Bonanza was indeed popular in its time! It's amazing how it still resonates with so many people today. Do you watch anything similar now?",
+      "response": "Bonanza was a classic! It's nice to reconnect with those nostalgic shows from your childhood. Do you remember any specific scenes or characters that stood out to you?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3457,10 +3457,10 @@
     {
       "index": 191,
       "user": "It was horrible and boring, but I'm hoping to take up a hobby soon so I can have something to do when he's away.",
-      "response": "Taking on a new hobby sounds like a great idea! Maybe start with something simple that doesn't require much time or space, like painting or knitting? And remember, it's okay if things change - the important thing is to keep an open mind.",
+      "response": "I can imagine it felt really isolating. Having a hobby could definitely make those times easier. What kind of activities have you been thinking about trying?",
       "expected_policy": "comforting",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3476,10 +3476,10 @@
     {
       "index": 192,
       "user": "Oh I have. I always maintained my glass half full though as so many have it worse! But it does get harder as the years go on. Life really doesn't always turn out how you think it will or how you want. It's a series of unfortunate and traumatic events a lot.",
-      "response": "Life can be unpredictable. Sometimes good times and bad come together all at once. Remember that everyone has their own experiences and challenges. It's okay to feel sad from time to time but also try to find joy in small moments. What brings you happiness these days?",
+      "response": "That's true; life can throw us curveballs we didn't see coming. Even with all that, maintaining hope is incredibly powerful. Do you find any activities or people who help keep your spirits up?",
       "expected_policy": "comforting",
-      "predicted_policy": "comforting",
-      "response_emotion": "sad",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3496,7 +3496,7 @@
     {
       "index": 193,
       "user": "i wanted to go fishing with the family",
-      "response": "That's so nice of you! Maybe we could plan another time together soon? It sounds like a fun experience for everyone!",
+      "response": "That sounds like a fun plan! Missing out on that must have felt disappointing. Do you think there's any chance of rescheduling for another time soon?",
       "expected_policy": "comforting",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3515,10 +3515,10 @@
     {
       "index": 194,
       "user": "yes, thank you. Do you have kids of your own?",
-      "response": "Not that I'm aware of, but I understand the joy parents feel about their children's growth and capabilities. It's wonderful to see how we can help nurture our loved ones.",
+      "response": "I don't have physical experiences or personal life like humans do, but I'm here to support and understand yours! Is there anything specific you'd like to talk about regarding your parenting journey?",
       "expected_policy": "playful",
-      "predicted_policy": "playful",
-      "response_emotion": "happy",
+      "predicted_policy": "neutral",
+      "response_emotion": "neutral",
       "state": {
         "affection": 52,
         "trust": 50,
@@ -3532,7 +3532,7 @@
     {
       "index": 195,
       "user": "They do, my cooking skills were just lacking and my friend was aware of the situation and very helpful. I find it hard to ask for assistance at times but I'm comfortable with Bill because I've known him for years.",
-      "response": "It sounds like you have some great friends who understand your limitations and help when they can. It takes courage to ask for help sometimes, especially when we're close to others. How has knowing this helped in your friendships so far?",
+      "response": "It's great that you have such a supportive friend like Bill! Sometimes it can be tough to ask for help, but knowing someone has your back makes all the difference. Do you think there are any areas where you'd feel more confident asking for support from others?",
       "expected_policy": "playful",
       "predicted_policy": "playful",
       "response_emotion": "happy",
@@ -3552,10 +3552,10 @@
     {
       "index": 196,
       "user": "I try my best to only associate with the best of people.",
-      "response": "That's admirable. Maintaining integrity and choosing wisely goes a long way. Keep being mindful of your relationships. What brings you joy these days?",
+      "response": "That's a great attitude! Surrounding yourself with positive influences really helps. How do you usually ensure you're spending time with good people?",
       "expected_policy": "playful",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3569,10 +3569,10 @@
     {
       "index": 197,
       "user": "You have a point there. Maybe I should be happy with my old clunker after all lol",
-      "response": "Absolutely! It's important to focus on what you truly desire rather than what others have or don’t. Enjoy your current situation and remember to appreciate the small things around you too.",
+      "response": "It's great to appreciate what you have! Sometimes focusing on the positives can really lift our spirits. What do you like about your current car?",
       "expected_policy": "tense",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "playful",
+      "response_emotion": "happy",
       "state": {
         "affection": 51,
         "trust": 50,
@@ -3586,10 +3586,10 @@
     {
       "index": 198,
       "user": "Well, I did not realize how different it would be to be alone in the house for a few days.  I don't really like it much.",
-      "response": "That sounds challenging. What can you do to make this time more bearable?",
+      "response": "I can understand why that might feel strange and a bit lonely. Are there any specific things you're finding challenging about being home alone?",
       "expected_policy": "comforting",
-      "predicted_policy": "neutral",
-      "response_emotion": "neutral",
+      "predicted_policy": "comforting",
+      "response_emotion": "lonely",
       "state": {
         "affection": 50,
         "trust": 50,
@@ -3603,7 +3603,7 @@
     {
       "index": 199,
       "user": "For fun. I'm very excited!",
-      "response": "Sounds like you're in high spirits with that news. Ordering new books can be such an exciting thing to look forward to, especially when it's something you really enjoy. How does it feel to get started on these new adventures now?",
+      "response": "I can totally understand that excitement! Reading is such a rewarding experience. What genres are you looking forward to diving into first?",
       "expected_policy": "playful",
       "predicted_policy": "neutral",
       "response_emotion": "neutral",
@@ -3622,142 +3622,131 @@
   ],
   "breakdown": {
     "admiration": {
-      "admiration": 4,
+      "joy": 1,
+      "admiration": 6,
       "approval": 1,
-      "excitement": 1,
-      "joy": 2,
       "curiosity": 2
     },
     "joy": {
-      "curiosity": 4,
-      "admiration": 5,
-      "excitement": 1,
-      "approval": 1,
-      "caring": 1,
-      "joy": 1
-    },
-    "neutral": {
-      "joy": 1,
-      "caring": 6,
-      "curiosity": 16,
-      "admiration": 12,
-      "excitement": 5,
-      "neutral": 1
-    },
-    "approval": {
-      "approval": 1,
-      "curiosity": 7,
-      "sadness": 1,
-      "admiration": 6,
-      "caring": 2,
-      "joy": 2
-    },
-    "realization": {
-      "admiration": 2,
-      "surprise": 1,
+      "admiration": 7,
+      "excitement": 3,
       "curiosity": 2,
       "sadness": 1
     },
-    "love": {
-      "admiration": 4,
-      "excitement": 2,
+    "neutral": {
+      "disappointment": 2,
+      "curiosity": 18,
+      "admiration": 13,
+      "confusion": 1,
+      "excitement": 4,
+      "annoyance": 2,
+      "approval": 1
+    },
+    "approval": {
       "approval": 1,
-      "curiosity": 1
+      "disappointment": 1,
+      "curiosity": 8,
+      "love": 1,
+      "admiration": 8
+    },
+    "realization": {
+      "admiration": 2,
+      "curiosity": 4
+    },
+    "love": {
+      "admiration": 5,
+      "annoyance": 1,
+      "curiosity": 2
     },
     "desire": {
-      "caring": 3,
-      "approval": 3,
-      "curiosity": 2,
-      "admiration": 2
+      "sadness": 1,
+      "curiosity": 7,
+      "disappointment": 1,
+      "admiration": 1
     },
     "disappointment": {
-      "curiosity": 5,
-      "approval": 2,
+      "curiosity": 4,
+      "amusement": 1,
       "admiration": 1,
-      "caring": 1
+      "disappointment": 2,
+      "sadness": 1
     },
     "confusion": {
-      "confusion": 1,
-      "joy": 1,
-      "approval": 1,
-      "curiosity": 1,
+      "curiosity": 3,
+      "neutral": 1,
       "admiration": 1
     },
     "optimism": {
+      "annoyance": 1,
       "optimism": 1,
-      "confusion": 1,
-      "approval": 1,
-      "caring": 3,
-      "joy": 1,
-      "admiration": 2
+      "curiosity": 4,
+      "admiration": 3
     },
     "excitement": {
-      "admiration": 2,
-      "excitement": 2,
-      "curiosity": 1
+      "curiosity": 3,
+      "excitement": 2
     },
     "sadness": {
-      "curiosity": 4,
-      "admiration": 4,
-      "caring": 6,
+      "caring": 2,
+      "admiration": 1,
+      "curiosity": 7,
+      "disappointment": 1,
+      "sadness": 4,
       "fear": 1,
-      "neutral": 1,
       "annoyance": 1
     },
     "fear": {
-      "caring": 1,
-      "curiosity": 3
+      "approval": 2,
+      "curiosity": 1,
+      "excitement": 1
     },
     "disapproval": {
-      "nervousness": 1,
-      "curiosity": 4,
+      "curiosity": 6,
       "admiration": 2,
-      "approval": 1,
-      "caring": 1
+      "approval": 1
     },
     "nervousness": {
-      "curiosity": 1,
-      "caring": 2
+      "caring": 1,
+      "remorse": 1,
+      "curiosity": 1
     },
     "embarrassment": {
-      "admiration": 1
+      "curiosity": 1
     },
     "amusement": {
-      "caring": 2,
-      "curiosity": 1,
-      "joy": 2
+      "curiosity": 3,
+      "amusement": 1,
+      "admiration": 1
     },
     "gratitude": {
       "admiration": 4,
-      "caring": 2,
-      "joy": 2,
-      "curiosity": 1
+      "curiosity": 3,
+      "caring": 1,
+      "excitement": 1
     },
     "curiosity": {
-      "remorse": 1,
-      "love": 1,
-      "curiosity": 1,
-      "caring": 1
+      "curiosity": 4
     },
     "caring": {
       "joy": 1
     },
     "annoyance": {
-      "curiosity": 1,
-      "caring": 1,
-      "disappointment": 1
+      "curiosity": 2,
+      "sadness": 1
     },
     "surprise": {
-      "admiration": 2,
+      "joy": 1,
       "curiosity": 1,
-      "excitement": 1
+      "caring": 1,
+      "surprise": 1
     },
     "anger": {
       "curiosity": 1,
-      "caring": 1
+      "annoyance": 1
     },
     "disgust": {
-      "curiosity": 3
+      "curiosity": 2,
+      "sadness": 1
     }
   }
 }

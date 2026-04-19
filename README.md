@@ -29,6 +29,16 @@ python -m src.inference.generate
 python -m src.app
 ```
 
+**Windows with non-English locales:** If you hit a `UnicodeDecodeError` during training, set UTF-8 mode before running:
+
+```powershell
+# PowerShell
+$env:PYTHONUTF8="1"
+
+# Or set it permanently (cmd)
+set PYTHONUTF8=1
+```
+
 ## Model
 
 - Primary: `Qwen/Qwen2.5-1.5B-Instruct`

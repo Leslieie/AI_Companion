@@ -1,31 +1,37 @@
-"""Starter SFT training script with LoRA.
+"""SFT training script with LoRA for Qwen2.5-7B-Instruct.
 
 Usage:
-    python src/training/train_sft.py
+    python -m src.training.train_sft_7b
 
-Requires a prepared training file at data/processed/train_sft.jsonl.
-Adjust hyperparameters in configs/training_sft.yaml or directly below.
+Uses the same training data as the 1.5B pipeline but targets the 7B model
+with gradient checkpointing enabled to reduce VRAM usage.
 """
 
 import os
 os.environ["PYTHONUTF8"] = "1"
 
+import torch
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import LoraConfig
 from trl import SFTTrainer, SFTConfig
 
 
-MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
+MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 DATA_PATH = "data/processed/train_sft_clean.jsonl"
 VAL_PATH = "data/processed/val_sft_clean.jsonl"
-OUTPUT_DIR = "outputs/checkpoints/sft_run_01"
+OUTPUT_DIR = "outputs/checkpoints/sft_7b_run_01"
 
 
 def main() -> None:
-    """Run SFT training with LoRA."""
+    """Run SFT training with LoRA on the 7B model."""
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, device_map="auto")
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        torch_dtype=torch.bfloat16,
+        device_map="auto",
+    )
+    model.gradient_checkpointing_enable()
 
     dataset = load_dataset("json", data_files=DATA_PATH, split="train")
     val_dataset = load_dataset("json", data_files=VAL_PATH, split="train")
@@ -64,6 +70,7 @@ def main() -> None:
         bf16=True,
         max_length=1024,
         report_to="none",
+        gradient_checkpointing=True,
     )
 
     trainer = SFTTrainer(
